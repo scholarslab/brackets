@@ -3,8 +3,14 @@
 <title>{{ site.title }}</title>
 <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
 <header role="banner">
-    <h1>{{ site.title }}</h1>
+    <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
 </header>
+<nav id="lessons">
+    <a href="{{ "/raw-material/" | relative_url }}">Raw Material</a>
+    <a href="{{ "/design-ethos/" | relative_url }}">Design Ethos</a>
+    <a href="{{ "/environment/" | relative_url }}">Environment</a>
+    <a href="{{ "/glossary/" | relative_url }}">Glossary</a>
+</nav>
 <main>
     {{ content }}
 </main>
