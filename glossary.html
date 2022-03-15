@@ -1,0 +1,10 @@
+---
+layout: page
+title: Glossary
+---
+<dl>
+    {% for entry in site.data.glossary %}
+    <dt>{{ entry.term }}</dt>
+    <dd>{{ entry.definition }}</dd>
+    {% endfor %}
+</dl>
