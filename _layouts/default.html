@@ -6,14 +6,19 @@
     <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
 </header>
 <nav id="lessons">
-    <a href="{{ "/raw-material/" | relative_url }}">Raw Material</a>
-    <a href="{{ "/design-ethos/" | relative_url }}">Design Ethos</a>
-    <a href="{{ "/environment/" | relative_url }}">Environment</a>
-    <a href="{{ "/glossary/" | relative_url }}">Glossary</a>
+    {% for item in site.global_navigation %}
+    {% assign link = site.pages | where_exp: "page", "page.url contains item" | first %}
+    <a class="{{ item }}{% if page.url == link.url %} current{% endif %}" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+    {% endfor %}
 </nav>
 <main>
     {{ content }}
 </main>
 <footer role="contentinfo">
-
+    <nav id="courtesy">
+        {% for item in site.courtesy_navigation %}
+        {% assign link = site.pages | where_exp: "page", "page.url contains item" | first %}
+        <a class="{{ item }}{% if page.url == link.url %} current{% endif %}" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+        {% endfor %}
+    </nav>
 </footer>

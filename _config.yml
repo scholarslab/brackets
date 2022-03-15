@@ -30,6 +30,16 @@ twitter_username: scholarslab
 github_username:  scholarslab
 permalink: /:year/:month/:title/
 
+global_navigation:
+  - environment
+  - raw-material
+  - design-ethos
+
+courtesy_navigation:
+  - about
+  - testimonials
+  - glossary
+
 # Build settings
 plugins:
   - jekyll-feed
