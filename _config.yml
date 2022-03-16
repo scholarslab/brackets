@@ -34,11 +34,13 @@ global_navigation:
   - environment
   - raw-material
   - design-ethos
+  - tutorials
 
 courtesy_navigation:
   - about
   - testimonials
   - glossary
+  - tutorials
 
 # Build settings
 plugins:
