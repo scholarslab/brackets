@@ -2,6 +2,7 @@
 <meta charset="utf-8">
 <title>{{ site.title }}</title>
 <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
+<body class="{{ page.title | slugify }}">
 <header role="banner">
     <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
 </header>
@@ -22,3 +23,4 @@
         {% endfor %}
     </nav>
 </footer>
+</body>

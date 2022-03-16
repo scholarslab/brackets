@@ -15,14 +15,9 @@ body {
 html{
     font-family: 'Josefin Sans', sans-serif;
     color: #333;
-    background-color: rgb(202, 210,197);
+    background-color: #f0f0f0;
     font-size: 20px;
     margin:0;
-    padding:50px;
-}
-
-body {
-    padding: 50px 100px;
 }
 
 a,a:link {
@@ -74,12 +69,68 @@ p {
     font-family: 'Karla', sans-serif;
 }
 
-header h1 {
-    font-size: 30px;
+/*
+Typing animation courtesy of https://css-tricks.com/snippets/css/typewriter-effect/
+*/
+header h1 a {
+    display:block;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .75em solid gray; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+        typing 1.75s steps(30, end),
+        blink-caret .5s step-end infinite;
 }
 
 .image {
     float: right;
     width: 300px;
     margin: 0 0 10px 10px;
+}
+
+/* Home */
+.home {
+    padding: 0;
+    header {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0,0,0,0.825);
+
+        h1 {
+            margin:0;
+            font-size: 4rem;
+        }
+        a,:link {
+            color: rgba(255,255,255,0.75);
+            text-decoration:none;
+        }
+        :hover,:focus {
+            color: white;
+            background:none;
+        }
+    }
+
+    nav,main {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 700px;
+        padding: 4rem 0;
+    }
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color:gray;}
 }
