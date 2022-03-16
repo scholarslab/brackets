@@ -39,6 +39,12 @@ a:active {
     color: #333;
 }
 
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
 nav {
     a, :link {
         text-decoration:none;
@@ -70,4 +76,10 @@ p {
 
 header h1 {
     font-size: 30px;
+}
+
+.image {
+    float: right;
+    width: 300px;
+    margin: 0 0 10px 10px;
 }
