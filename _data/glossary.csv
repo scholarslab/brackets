@@ -1,3 +1,42 @@
 term,definition
-HTML,"Hypertext Markup Language."
-CSS,"Cascading Style Sheets"
+Git ,
+Git Hub ,
+VS Code (Joseph),"Unless you have another preference, VSCode is an incredibly user friendly code editor. As newcomers, we found the debugging support to be helpful in writing, testing and even learning what code is. VSCode can read a wide range of coding languages including HTML, CSS and Python. The editor highlights any errors within your code and even suggests ways to fix them."
+Terminal,
+HTML,
+CSS,Style language that lets you select certain things on a webpage and you can give them any number of properties
+Header,
+Anchor ,
+Tag,
+Div,
+Inspect Element,
+Browser ,
+Markup/Markdown,
+Style sheet ,
+Alt text (Joseph),(Can be referred to as: alt tags and alt descriptions) Alt text: is the written text that is displayed in place of an image on a webpage if the image does not load. Alt text helps screen-reading tools describe images to visually impaired readers and allows search engines to better crawl and rank your website.
+Padding (jacqui) ,
+Line height (jacqui) ,
+Float (jacqui) ,
+Stack Overflow (jacquii) ,
+Clone (jacqui) ,
+Subtweet (Cherrie - we use the word in the statement but it's not directly relevant to coding a website itself so we can axe this if we want),a tweet that refers to another person's tweet (often in a derogatory or mocking way) without directly mentioning that person
+Pixel (px) (Cherrie),a basic unit of measurement for the screen
+Comment (Cherrie),"contextual information that the programmer includes in their code to explain what a particular line of code is doing to the reader, so that others can use and adapt the code for their own purposes"
+Environment (in a computational context) (Cherrie),the software (eg. VS code) and hardware (eg. a laptop) that you are working with  
+,
+"Code (Jennifer) - This could be a way to give explicit definitions of our idea of ""coding""",
+Margin (Jennifer),
+Property (Jennifer),
+Em (Jennifer),"A unit that refers to the font size. If something has a 1 inch font size, then the ""em"" is 1 inch. If used for things outside of font size, then those become dependent on it. (relative unit vs. absolute)"
+Border (Jennifer),
+"Color - HEX, RGB, etc (Jennifer) ",
+Rule Set (Jennifer),"A rule set is a section of CSS code that includes the ""selector"" (use better word), curly brackets, and the indented code that follows."
+Value (Jennifer),
+Selector (Jennifer),
+Delclaration Block (Jennifer),
+Environment Set-Up (Joseph),"An Environment Setup is a base on top of which we can do our programming. We need the necessary software setup, i.e., installation on our PC which will be used to write computer programs, compile, and execute them. This is a vital initial step that can take those less comfortable with technology longer than expected (which is completewly fine!). "
+Boilerplate templates (Joseph),"Sections of code that are repeated (often a number of times) with minimal variation. Often can act as an initial base layer and can be re-purposed. Sometimes frowned upon by 'programmers,' but provides a great starting place for us beginniers. https://www.youtube.com/watch?v=Vz8ml5bOid0"
+WSL (Joseph),"Windows subsystem for Linux (WSL) lets you run a Linux environment, including command-line tools and applications, directly on Windows, without the overhead of a traditional virtual machine or dual boot setup."
+Repo (jacqui) ,
+Directory (jacqui) ,
+Git command line (Joseph),
