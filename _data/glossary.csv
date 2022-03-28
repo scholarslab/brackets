@@ -1,24 +1,25 @@
 term,definition
-Git ,
-Git Hub ,
+Git (Joseph),"Git is software that allows us to work on our own projects (like this website), or collaborate as a group. Like Homebrew, Git is a free and open source project. One of the best things about Git is how it tracks every single change that we will make, which is obviously ideal for group projects as well. Git will manage our source code and store it directly on our computer’s."
+GitHub ,GitHub is a website that provides web hosting and allows developers to collaborate and practice version control using Git. 
 VS Code (Joseph),"Unless you have another preference, VSCode is an incredibly user friendly code editor. As newcomers, we found the debugging support to be helpful in writing, testing and even learning what code is. VSCode can read a wide range of coding languages including HTML, CSS and Python. The editor highlights any errors within your code and even suggests ways to fix them."
-Terminal,
-HTML,
-CSS,Style language that lets you select certain things on a webpage and you can give them any number of properties
-Header,
-Anchor ,
-Tag,
-Div,
-Inspect Element,
-Browser ,
-Markup/Markdown,
-Style sheet ,
-Alt text (Joseph),(Can be referred to as: alt tags and alt descriptions) Alt text: is the written text that is displayed in place of an image on a webpage if the image does not load. Alt text helps screen-reading tools describe images to visually impaired readers and allows search engines to better crawl and rank your website.
-Padding (jacqui) ,
-Line height (jacqui) ,
-Float (jacqui) ,
-Stack Overflow (jacquii) ,
-Clone (jacqui) ,
+Terminal (Tarushi),"You know the little icons and drop down menus on your computer screen? And how you use your mouse/trackpad to accomplish different tasks on the computer by clicking, double-clicking, right-clicking, left-clicking, etc.? The terminal allows you to do all of these things, except through written commands. The terminal is also called the command line, and on a Mac, it comes pre-installed. Some common commands people use include: ""touch[space][file name]"" to create files' ""mkdir[space][folder name]"" to create folders; and ""ls"" to list all the files and directories which exist in the location you're currently situated in."
+HTML (Tarushi),
+CSS (Joseph: noted from Jeremy),Style language that lets you select certain things on a webpage and you can give them any number of properties
+Header (jacqui) ,"The header tag or element in HTML represents the place at the top of the page where you should put the introductory content for your site, like a title, authorship information, and links for navigation. You can use the tags <h1> through <h6> to designate subheaders on the page. "
+Anchor (Jacqui) ,"The anchor element in HTML, which looks like <a>, is used alongside <href> to create a hyperlink. The code will look like this: <a href=""link"">text you want to hyperlink</a>. "
+Tag (Jacqui) ,A tag in HTML is like a keyword in the code used to show the beginning and end of an HTML element in the markup document. The tags are what help computers turn HTML code into websites. 
+Div (Jacqui) ,"The <div> tag in HTML is used to designate a separate section and provide a container for those elements, which can then by styled separately in the style sheet. "
+Inspect Element (Jacqui) ,Inspect element is a browser tool that allows you to see the code beneath the hood of websites you visit. This is a great tool to use when learning web design that allows you to see how others have done it. 
+Browser (Jacqui) ,A browser is an application that allows users to access the web. It takes the appropriate content from a particular server and displays it on the users' device. 
+Markdown (Jacqui) ,"Markdown is a language used to generate a text in HTML. Using Markdown is less difficult and time-consuming than using HTML, but cannot do everything HTML can do. It is a good shorthand to use when creating something simple. link to: https://dillinger.io/"
+Markup (Jacqui) ,"Markup is a term, borrowed from print editing, for taking a plain text document and adding tags and annotations to it to create an HTML document. It can be a verb or a noun.  "
+Style sheet (Jacqui) ,"CSS stands for Cascading Style Sheet. This part of your code will be a separate page from your HTML and will be where you ""style"" the look of your site, including color, images, font, and layout. "
+Alt text (Joseph),(Can be referred to as: alt tags and alt descriptions) Alt text: is the written text that is displayed in place of an image on a webpage if the image does not load. Alt text supports screen-reading aids explain these images to visually impaired readers. Also enables search engines to crawl and rank websites more efficiently.
+Padding (jacqui) ,"In CSS, padding creates space between content and a defined border. "
+Line height (jacqui) ,"In CSS, the line-height property is used to set the distance between lines of text, what is referred to as line spacing in Microsoft Word. "
+Float (jacqui) ,"In CSS, the float property moves an object to one side of its container, allowing the text to wrap around it. "
+Stack Overflow (jacquii) ,"Stack Overflow is a question-and-answer website for developers, where coders help solve each other's problems. It is a great place to check if you get stuck, but isn't without downsides. [ Link to this article, and the site itself: https://www.tandfonline.com/doi/full/10.1080/1369118X.2021.1962943 ]"
+Clone (jacqui) ,"In Git, to clone a repository means to make a copy of it that lives on your computer, which you can then make changes to and later ""push"" back onto the site. "
 Subtweet (Cherrie - we use the word in the statement but it's not directly relevant to coding a website itself so we can axe this if we want),a tweet that refers to another person's tweet (often in a derogatory or mocking way) without directly mentioning that person
 Pixel (px) (Cherrie),a basic unit of measurement for the screen
 Comment (Cherrie),"contextual information that the programmer includes in their code to explain what a particular line of code is doing to the reader, so that others can use and adapt the code for their own purposes"
@@ -34,9 +35,16 @@ Rule Set (Jennifer),"A rule set is a section of CSS code that includes the ""sel
 Value (Jennifer),
 Selector (Jennifer),
 Delclaration Block (Jennifer),
-Environment Set-Up (Joseph),"An Environment Setup is a base on top of which we can do our programming. We need the necessary software setup, i.e., installation on our PC which will be used to write computer programs, compile, and execute them. This is a vital initial step that can take those less comfortable with technology longer than expected (which is completewly fine!). "
-Boilerplate templates (Joseph),"Sections of code that are repeated (often a number of times) with minimal variation. Often can act as an initial base layer and can be re-purposed. Sometimes frowned upon by 'programmers,' but provides a great starting place for us beginniers. https://www.youtube.com/watch?v=Vz8ml5bOid0"
-WSL (Joseph),"Windows subsystem for Linux (WSL) lets you run a Linux environment, including command-line tools and applications, directly on Windows, without the overhead of a traditional virtual machine or dual boot setup."
-Repo (jacqui) ,
-Directory (jacqui) ,
+Environment Set-Up (Joseph),An Environment Setup: gathering and downloading all of the things that we will need to code and design a website. This is a vital initial step that can take those less comfortable with technology longer than expected (which is completewly fine!). 
+Boilerplate templates (Joseph),"Gives us newcomers a great starting point. Provides a bit of code that we can work off of: a foundation to build from. Much like starting with a microsoft word template, but in code form. https://www.youtube.com/watch?v=Vz8ml5bOid0"
+WSL (Joseph),"Windows subsystem for Linux (WSL) lets you run a Linux environment, which includes command-line tools and apps (in Windows) "
+Repository (Repo) (jacqui) ,"In GitHub, a repository (or repo for short) is the place that contains all of your project's files and its revision history."
+Directory (jacqui) ,"(confused on this, is the directory and the repo the same??) "
 Git command line (Joseph),
+Homebrew (Joseph),"Homebrew is a free software package management system (app) that makes installing software on a Mac much easier. Basically, Homebrew will help us install anything we might need for coding that Apple did not already provide."
+Git Bash (Joseph),"Git Bash is an application that will allow you to use Git with your Windows Operating System. Git Bash will serve as a command-line shell, which will enable you to use git with the command line in the system. A shell is an application used to communicate with an operating system through your written commands. The Git Bash package includes several components: Bash (Bourne Again Shell), a few basic bash utilities, and Git. Git Bash will enable you to work with the repository and git elements through the commands. If this description sounded like mind-numbing jargon — you are not alone. With that being said, these applications and systems will begin to make a lot more sense as we start to use them to build your site (trust me!)."
+Version control (Jacqui) ,"Version control is the practice of tracking changes to software code, so that previous versions can be accessed later. "
+Commit (Jacqui) ,"In GitHub, a commit is a revision or change to a repository. When you make a commit, you must leave a ""commit message"" for yourself or others on your team about the changes that were made, which helps keep track of the project's revision history. "
+,
+"I think we should cite these two, more in-depth glossaries as places to go to for more terms (Jacqui): https://docs.github.com/en/get-started/quickstart/github-glossary and https://www.w3schools.com/TAgs/default.asp  ",
+Other Glossaries: ,Here are two more in-depth glossaries for terms pertaining to [GitHub](https://docs.github.com/en/get-started/quickstart/github-glossary) and [HTML](https://www.w3schools.com/TAgs/default.asp). 
