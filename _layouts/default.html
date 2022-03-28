@@ -2,9 +2,37 @@
 <meta charset="utf-8">
 <title>{{ site.title }}</title>
 <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
-<header role="banner">
-    <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+<body class="{{ page.title | slugify }}">
+<header id="banner" role="banner">
+    <h1><a id="title" href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
 </header>
+<script>
+    var names = ["Cherrie", "Jacqui", "Jennifer", "Joseph", "Susan", "Tarushi", "{{ site.title }}"];
+    var i = 0;
+    var j = 0;
+    const element = document.getElementById("title");
+    setInterval(function() {
+        if (i < names.length){
+            if (j<names[i].length+8){
+                element.innerHTML = names[i].substring(0, j)+"|";
+                j+=1
+            }
+            else{
+                i+=1
+                j=0
+            }
+        }
+        else{
+            if (j % 25 > 10){
+                element.innerHTML = names[i-1]+"|";
+            }
+            else{
+                element.innerHTML = names[i-1];
+            }
+            j+=1
+        }
+        }, 50);
+</script>
 <nav id="lessons">
     {% for item in site.global_navigation %}
     {% assign link = site.pages | where_exp: "page", "page.url contains item" | first %}
@@ -22,3 +50,4 @@
         {% endfor %}
     </nav>
 </footer>
+</body>
