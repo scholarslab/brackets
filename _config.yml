@@ -34,7 +34,8 @@ global_navigation:
   - environment
   - individuality-solidarity
   - design-ethos
-  - tutorials
+  - html-tutorial
+  - css-tutorial
 
 courtesy_navigation:
   - about
