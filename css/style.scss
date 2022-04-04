@@ -32,20 +32,27 @@ body {
 html{
     font-family: 'Josefin Sans', sans-serif;
     color: #333;
-    background-color: #aaa;
+    background-color: #fafafa;
     font-size: 24px;
     margin:0;
 }
 
+body {
+    padding: 1rem;
+}
+
+body.home {
+    padding:0;
+}
+
 a,a:link {
-    color: rgb(60, 68, 55);
+    color: rgba(0,200,200,.875);
 }
 a:visited {
-    color:rgba(60, 68, 55,.8);
+    color:rgba(0,200,200,0.875);
 }
 a:hover,a:focus,a.current {
-    color: rgb(60, 68, 55);
-    background: rgba(255,255,255,0.1);
+    color:rgba(0,200,200,1);
 }
 a:active {
     color: #333;
@@ -61,21 +68,21 @@ nav {
     a, :link {
         text-decoration:none;
         padding: 8px;
-        background: rgba(255,255,255,0.125);
+        background: rgba(0,200,200,0.05);
     }
     :hover,:focus,.current {
-        background: rgba(255,255,255,0.425);
+        background: rgba(0,200,200,0.1);
     }
 }
 
 h1 {
-    color: rgba(255,255,255, .8);
+    color: rgba(0,0,0, .675);
     font-variant: small-caps;
     letter-spacing: 3px;
     font-weight: 100;}
 
 h2 {
-    color: rgba(255,255,255, .8);
+    color: rgba(0,0,0, .8);
     font-variant: small-caps;
     letter-spacing: 1px;
     font-weight: 150;
@@ -117,7 +124,7 @@ p {
         */
 
         a {
-            color: rgba(255,255,255,0.75);
+            color: rgba(0,200,200,0.75);
             text-decoration:none;
             display:block;
             line-height:1;
@@ -128,7 +135,7 @@ p {
         }
 
         :hover,:focus {
-            color: white;
+            color: rgba(0,200,200,0.95);
             background:none;
         }
     }
@@ -150,9 +157,11 @@ p {
 }
 
 article {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+
+}
+
+article > h1 {
+    font-size: 60px;
 }
 
 .html-css-tutorial {
