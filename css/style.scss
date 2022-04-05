@@ -32,20 +32,29 @@ body {
 html{
     font-family: 'Josefin Sans', sans-serif;
     color: #333;
-    background-color: #aaa;
+    background-color: #fafafa;
     font-size: 24px;
     margin:0;
 }
 
+body {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+body.home {
+    padding:0;
+}
+
 a,a:link {
-    color: rgb(60, 68, 55);
+    color: rgba(0,200,200,.875);
 }
 a:visited {
-    color:rgba(60, 68, 55,.8);
+    color:rgba(0,200,200,0.875);
 }
 a:hover,a:focus,a.current {
-    color: rgb(60, 68, 55);
-    background: rgba(255,255,255,0.1);
+    color:rgba(0,200,200,1);
 }
 a:active {
     color: #333;
@@ -58,24 +67,28 @@ img {
 }
 
 nav {
+    font-size:18px;
     a, :link {
+        display:block;
         text-decoration:none;
         padding: 8px;
-        background: rgba(255,255,255,0.125);
+        background: rgba(0,200,200,0.05);
     }
     :hover,:focus,.current {
-        background: rgba(255,255,255,0.425);
+        background: rgba(0,200,200,0.1);
     }
 }
 
 h1 {
-    color: rgba(255,255,255, .8);
+    color: rgba(0,0,0, .675);
     font-variant: small-caps;
     letter-spacing: 3px;
-    font-weight: 100;}
+    font-weight: 100;
+    font-size: 24px;
+}
 
 h2 {
-    color: rgba(255,255,255, .8);
+    color: rgba(0,0,0, .8);
     font-variant: small-caps;
     letter-spacing: 1px;
     font-weight: 150;
@@ -99,7 +112,7 @@ p {
     flex-wrap:nowrap;
 
     #banner {
-        min-height: 100vh;
+        min-height: 90vh;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -117,7 +130,7 @@ p {
         */
 
         a {
-            color: rgba(255,255,255,0.75);
+            color: rgba(0,200,200,0.75);
             text-decoration:none;
             display:block;
             line-height:1;
@@ -128,8 +141,12 @@ p {
         }
 
         :hover,:focus {
-            color: white;
+            color: rgba(0,200,200,0.95);
             background:none;
+        }
+
+        nav {
+            display:none;
         }
     }
 
@@ -149,20 +166,33 @@ p {
 
 }
 
+#start {
+    display:block;
+    line-height:0;
+    text-decoration:none;
+    background-color: rgba(0,220,220,1);
+    color: white;
+    font-weight: bold;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 30px;
+    padding: 30px 0;
+    margin: 40px auto;
+}
+
+#start:hover,
+#start:focus {
+    background-color: rgba(0,220,220,0.8);
+}
+
 article {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+
 }
 
-.html-css-tutorial {
-
-    article section {
-        min-height:100vh;
-        background: #fff;
-    }
+article > h1 {
+    font-size: 60px;
 }
-
 
 .glossary dt {
     font-weight:bold;
@@ -175,4 +205,20 @@ article {
 
 section:target {
     background: orange;
+}
+
+.lesson {
+    background-image: url('/images/taurus.jpg');
+    background-position: -200px 0;
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-left: 50%;
+}
+
+.lesson h1,
+.lesson .content {
+    background: white;
+    margin:0;
+    padding: 20px;
 }
