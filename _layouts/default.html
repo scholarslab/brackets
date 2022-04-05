@@ -6,6 +6,7 @@
 <header id="banner" role="banner">
     <h1><a id="title" href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
 </header>
+{% if page.title == 'Home' %}
 <script>
     var names = ["Cherrie", "Jacqui", "Jennifer", "Joseph", "Susan", "Tarushi", "{{ site.title }}"];
     var i = 0;
@@ -33,6 +34,7 @@
         }
         }, 50);
 </script>
+{% endif %}
 <nav id="lessons">
     {% for item in site.global_navigation %}
     {% assign link = site.pages | where_exp: "page", "page.url contains item" | first %}
