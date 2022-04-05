@@ -38,7 +38,9 @@ html{
 }
 
 body {
-    padding: 1rem;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 body.home {
@@ -65,7 +67,9 @@ img {
 }
 
 nav {
+    font-size:18px;
     a, :link {
+        display:block;
         text-decoration:none;
         padding: 8px;
         background: rgba(0,200,200,0.05);
@@ -79,7 +83,9 @@ h1 {
     color: rgba(0,0,0, .675);
     font-variant: small-caps;
     letter-spacing: 3px;
-    font-weight: 100;}
+    font-weight: 100;
+    font-size: 24px;
+}
 
 h2 {
     color: rgba(0,0,0, .8);
@@ -106,7 +112,7 @@ p {
     flex-wrap:nowrap;
 
     #banner {
-        min-height: 100vh;
+        min-height: 90vh;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -138,6 +144,10 @@ p {
             color: rgba(0,200,200,0.95);
             background:none;
         }
+
+        nav {
+            display:none;
+        }
     }
 
     #lessons,main,footer {
@@ -156,6 +166,26 @@ p {
 
 }
 
+#start {
+    display:block;
+    line-height:0;
+    text-decoration:none;
+    background-color: rgba(0,220,220,1);
+    color: white;
+    font-weight: bold;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 30px;
+    padding: 30px 0;
+    margin: 40px auto;
+}
+
+#start:hover,
+#start:focus {
+    background-color: rgba(0,220,220,0.8);
+}
+
 article {
 
 }
@@ -163,15 +193,6 @@ article {
 article > h1 {
     font-size: 60px;
 }
-
-.html-css-tutorial {
-
-    article section {
-        min-height:100vh;
-        background: #fff;
-    }
-}
-
 
 .glossary dt {
     font-weight:bold;
@@ -184,4 +205,20 @@ article > h1 {
 
 section:target {
     background: orange;
+}
+
+.lesson {
+    background-image: url('/images/taurus.jpg');
+    background-position: -200px 0;
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-left: 50%;
+}
+
+.lesson h1,
+.lesson .content {
+    background: white;
+    margin:0;
+    padding: 20px;
 }
