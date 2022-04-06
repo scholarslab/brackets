@@ -66,6 +66,9 @@ img {
     height: auto;
 }
 
+#banner {
+    background: rgba(0,0,0,0.825);
+}
 nav {
     font-size:18px;
     a, :link {
@@ -123,7 +126,6 @@ code {
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
-        background: rgba(0,0,0,0.825);
 
         h1 {
             margin:0;
