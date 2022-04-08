@@ -2,9 +2,8 @@
 layout: page
 title: Glossary
 ---
-<dl>
-    {% for entry in site.data.glossary %}
-    <dt>{{ entry.term | markdownify}}</dt>
+<dl id="glossary"> {% for entry in site.data.glossary %}
+    <dt>{{ entry.term }}</dt>
     <dd>{{ entry.definition | markdownify}}</dd>
     {% endfor %}
 </dl>
