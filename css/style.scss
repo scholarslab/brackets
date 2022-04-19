@@ -210,31 +210,21 @@ section:target {
 }
 
 .lesson {
-    background-image: url('/images/taurus.jpg');
-    background-position: -200px 0;
-    background-size: auto 100vh;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding-left: 50%;
-}
-
-.lesson h1,
-.lesson .content {
     background: white;
     margin:0;
     padding: 20px;
 }
 
 /* Hamburger menu code sourced from https://codepen.io/unleashalicia/pen/YzXrJBN */
-nav {
+#global_navigation {
     position:fixed;
 }
-nav ul {
+#global_navigation ul {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
 }
-nav button {
+#global_navigation button {
     cursor: pointer;
 }
 button.open-nav-btn {
@@ -271,7 +261,7 @@ button.open-nav-btn {
   outline: 2px solid orange;
 }
 
-nav a:focus,
+#global_navigation a:focus,
 .open-nav-btn:focus {
   outline: 2px solid blue;
   outline-offset: 5px;
