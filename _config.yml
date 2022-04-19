@@ -31,9 +31,9 @@ github_username:  scholarslab
 permalink: /:year/:month/:title/
 
 global_navigation:
-  - environment
   - individuality-solidarity
   - design-ethos
+  - environment
   - html-tutorial
   - css-tutorial
   - about
