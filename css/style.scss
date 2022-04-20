@@ -39,8 +39,7 @@ html{
 
 body {
     display:flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-direction: column;
 }
 
 a,a:link {
@@ -61,12 +60,6 @@ img {
     width: auto;
     height: auto;
 }
-
-#banner {
-    background: rgba(0,0,0,0.825);
-    padding-top: 50px;
-}
-
 
 h1,h2,h3 {
     font-family: 'Josefin Sans', sans-serif;
@@ -101,20 +94,29 @@ code {
     margin: 0 0 10px 10px;
 }
 
+/* Banner */
+#banner {
+    background: rgba(0,0,0,0.825);
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
 /* Home */
 .home {
     flex-direction: column;
 
     #banner {
-        height: 90vh;
-        max-height: 700px;
+        height: 30vh;
         display: flex;
         justify-content: center;
         align-items: center;
 
         h1 {
             margin:0;
-            font-size: 100px;
+            font-size: 30px;
         }
 
         /*
@@ -136,11 +138,6 @@ code {
             background:none;
         }
 
-    }
-
-    main {
-        margin: 40px auto;
-        max-width: 700px;
     }
 
 }
@@ -205,7 +202,9 @@ article > h1 {
 
 /* Hamburger menu code sourced from https://codepen.io/unleashalicia/pen/YzXrJBN */
 #global_navigation {
-    position:fixed;
+    position:absolute;
+    top:0;
+    right:0;
 }
 #global_navigation ul {
     list-style: none;
@@ -228,7 +227,7 @@ button.open-nav-btn {
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: black;
   overflow-x: hidden;
   transition: width 0.5s;
@@ -281,4 +280,47 @@ button.open-nav-btn {
 
 .active {
   width: 250px;
+}
+
+@media screen and (min-width: 900px) {
+
+    body {
+        display:flex;
+        flex-direction: row;
+    }
+
+    body > * {
+        flex: 1 1 200px;
+    }
+
+    #banner {
+        max-width: 200px;
+        min-width: 200px;
+    }
+
+    .home #banner {
+        height: 80vh;
+        max-width: none;
+        min-width: none;
+        max-height: 700px;
+        min-height: 200px;
+        width: 100vw;
+        flex-basis: auto;
+    }
+
+    .home #banner h1 {
+        font-size: 80px;
+    }
+
+    #global_navigation,
+    .slide-content {
+        position: fixed;
+        left:0;
+        right: unset;
+    }
+
+    main, {
+        padding: 80px;
+        width: auto;
+    }
 }
