@@ -17,7 +17,11 @@
         <div id="slide-nav" class="slide-content">
         <button type="button" id="close" class="close-btn" aria-label="close navigation">&times;</button>
         <ul id="link-list">
-        {% for item in site.global_navigation %}
+        {% for item in site.lesson_navigation %}
+        {% assign link = site.pages | where_exp: "page", "page.url contains item" | first %}
+        <li><a class="{{ item }}{% if page.url == link.url %} current{% endif %}" href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+        {% for item in site.complementary_navigation %}
         {% assign link = site.pages | where_exp: "page", "page.url contains item" | first %}
         <li><a class="{{ item }}{% if page.url == link.url %} current{% endif %}" href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
         {% endfor %}
