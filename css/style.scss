@@ -359,3 +359,35 @@ button.open-nav-btn {
         width: auto;
     }
 }
+
+#tabs .ui-tabs-nav {
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+}
+#tabs .ui-tabs-nav li {
+    margin:0 1px 0 0;
+    padding:10px 0;
+}
+#tabs .ui-tabs-nav a {
+    text-decoration:none;
+    padding: 10px 20px;
+}
+
+#tabs .ui-tabs-nav a:hover {
+    background: rgba(0,200,200,0.075);
+}
+#tabs .ui-tabs-active a {
+    background: rgba(0,200,200,0.2);
+}
+
+#tabs section {
+    background: rgba(0,200,200,0.2);
+    margin:0;
+    padding: 20px;
+}
+
+#tabs section h2 {
+    margin-top:0;
+}
