@@ -364,30 +364,40 @@ button.open-nav-btn {
     list-style:none;
     margin:0;
     padding:0;
+    font-size: 30px;
     display:flex;
+    justify-content: center;
 }
+
 #tabs .ui-tabs-nav li {
-    margin:0 1px 0 0;
-    padding:10px 0;
+    margin:0 1px;
+    padding:20px 0;
 }
+
 #tabs .ui-tabs-nav a {
     text-decoration:none;
-    padding: 10px 20px;
+    padding: 20px 60px;
+    flex-basis: 40%;
+    background: rgba(0,200,200,0.25);
 }
 
 #tabs .ui-tabs-nav a:hover {
-    background: rgba(0,200,200,0.075);
+    background: rgba(0,200,200,0.175);
 }
 #tabs .ui-tabs-active a {
-    background: rgba(0,200,200,0.2);
+    background: rgba(0,200,200,0.125);
 }
 
 #tabs section {
-    background: rgba(0,200,200,0.2);
-    margin:0;
-    padding: 20px;
+    background: rgba(0,200,200,0.125);
+    margin:0 -80px;
+    padding: 40px 80px;
 }
 
 #tabs section h2 {
     margin-top:0;
+}
+
+.ui-tabs-panel h2 {
+    display:none;
 }
