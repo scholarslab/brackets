@@ -1,29 +1,18 @@
 // Typing Effect for Site Title
-var names = ["Cherrie", "Jacqui", "Jennifer", "Joseph", "Susan", "Tarushi", "Your Name Here"];
-var i = 0;
-var j = 0;
-const element = document.getElementById("title");
-setInterval(function() {
-    if (i < names.length){
-        if (j<names[i].length+8){
-            element.innerHTML = names[i].substring(0, j)+"|";
-            j+=1
-        }
-        else{
-            i+=1
-            j=0
-        }
-    }
-    else{
-        if (j % 30 > 12){
-            element.innerHTML = names[i-1]+"|";
-        }
-        else{
-            element.innerHTML = names[i-1];
-        }
-        j+=1
-    }
-    }, 50);
+var site_title = $('.home #title');
+site_title_text = site_title.text();
+//site_title.empty();
+var typed_options = {
+    strings: ["","Cherrie","Jacqui", "Jennifer", "Joseph", "Susan", "Tarushi", site_title_text],
+    typeSpeed: 70,
+    backSpeed: 70,
+    backDelay: 1000,
+    startDelay: 1000,
+    showCursor:false
+};
+
+var typed = new Typed('.home #title', typed_options);
+
 
 // Hamburger code sourced from https://codepen.io/unleashalicia/pen/YzXrJBN
 // jQuery element variables

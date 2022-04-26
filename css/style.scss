@@ -132,6 +132,17 @@ blockquote {
     background: rgba(0,0,0,0.825);
 }
 
+.home #banner a {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home #banner span {
+    margin: 0 2px;
+}
+.bracket {
+    color: rgba(255,255,255,.125);
+}
 /* Main Content */
 main {
     padding: 20px;

@@ -11,6 +11,7 @@
   src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
   integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="
   crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <body class="{{ page.title | slugify }}">
 <nav id="global_navigation">
         <button type="button" id="hamburger-menu" class="open-nav-btn" aria-label="open navigation" aria-controls="link-list" aria-expanded="false">&#9776;</button>
@@ -29,7 +30,7 @@
     </div>
 </nav>
 <header id="banner" role="banner">
-    <h1><a id="title" href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+    <h1><a href="{{ "/" | relative_url }}"><span class="bracket">[</span><span id="title">{{ site.title }}</span><span class="bracket">]</span></a></h1>
 </header>
 <main>
     {{ content }}
