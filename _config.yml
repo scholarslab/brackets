@@ -30,12 +30,14 @@ twitter_username: scholarslab
 github_username:  scholarslab
 permalink: /:year/:month/:title/
 
-global_navigation:
+lesson_navigation:
   - individuality-solidarity
   - design-ethos
   - environment
   - html-tutorial
   - css-tutorial
+
+complementary_navigation:
   - about
   - glossary
 

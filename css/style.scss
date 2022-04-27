@@ -1,6 +1,6 @@
 ---
 ---
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;1,100&family=Karla:wght@200;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,700;1,100&family=Karla:wght@200;800&display=swap');
 
 /*
 
@@ -70,7 +70,7 @@ h1 {
     font-variant: small-caps;
     letter-spacing: 3px;
     font-weight: 100;
-    font-size: 24px;
+    font-size: 1.75em;
 }
 
 h2 {
@@ -78,13 +78,46 @@ h2 {
     font-variant: small-caps;
     letter-spacing: 1px;
     font-weight: 150;
+    font-size:1.5em;
 }
 
-p {
+h3 {
+    font-size: 1.25em;
+}
+
+h3,h4 {
+    font-weight: 700;
+}
+
+h4 {
+    color: rgba(0,0,0,0.5);
+    font-variant: small-caps;
+}
+
+h2,h3,h4,h5 {
+    margin-bottom:0 !important;
+    + p,
+    + ul,
+    + ol {
+        margin-top:0 !important;
+    }
+}
+
+p + h2 {
+    margin-top: 2em;
 }
 
 code {
     background-color: rgba(0,200,200,0.1);
+}
+
+blockquote {
+    background: rgba(0,200,200,0.1);
+    border-left: 10px solid rgba(0,200,200,0.4);
+    padding:40px;
+    margin:40px 0 40px 40px;
+    position:relative;
+    vertical-align: text-top;
 }
 
 
@@ -99,6 +132,17 @@ code {
     background: rgba(0,0,0,0.825);
 }
 
+.home #banner a {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home #banner span {
+    margin: 0 2px;
+}
+.bracket {
+    color: rgba(255,255,255,.125);
+}
 /* Main Content */
 main {
     padding: 20px;
@@ -145,7 +189,9 @@ main {
 /* Lesson Navigation */
 .lesson-navigation {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    width: 100%;
 }
 
 .lesson-navigation a,
@@ -323,4 +369,46 @@ button.open-nav-btn {
         padding: 80px;
         width: auto;
     }
+}
+
+#tabs .ui-tabs-nav {
+    list-style:none;
+    margin:0;
+    padding:0;
+    font-size: 30px;
+    display:flex;
+    justify-content: center;
+}
+
+#tabs .ui-tabs-nav li {
+    margin:0 1px;
+    padding:20px 0;
+}
+
+#tabs .ui-tabs-nav a {
+    text-decoration:none;
+    padding: 20px 60px;
+    flex-basis: 40%;
+    background: rgba(0,200,200,0.25);
+}
+
+#tabs .ui-tabs-nav a:hover {
+    background: rgba(0,200,200,0.175);
+}
+#tabs .ui-tabs-active a {
+    background: rgba(0,200,200,0.125);
+}
+
+#tabs section {
+    background: rgba(0,200,200,0.125);
+    margin:0 -80px;
+    padding: 40px 80px;
+}
+
+#tabs section h2 {
+    margin-top:0;
+}
+
+.ui-tabs-panel h2 {
+    display:none;
 }

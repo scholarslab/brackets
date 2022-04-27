@@ -11,13 +11,18 @@
   src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
   integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="
   crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <body class="{{ page.title | slugify }}">
 <nav id="global_navigation">
         <button type="button" id="hamburger-menu" class="open-nav-btn" aria-label="open navigation" aria-controls="link-list" aria-expanded="false">&#9776;</button>
         <div id="slide-nav" class="slide-content">
         <button type="button" id="close" class="close-btn" aria-label="close navigation">&times;</button>
         <ul id="link-list">
-        {% for item in site.global_navigation %}
+        {% for item in site.lesson_navigation %}
+        {% assign link = site.pages | where_exp: "page", "page.url contains item" | first %}
+        <li><a class="{{ item }}{% if page.url == link.url %} current{% endif %}" href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+        {% for item in site.complementary_navigation %}
         {% assign link = site.pages | where_exp: "page", "page.url contains item" | first %}
         <li><a class="{{ item }}{% if page.url == link.url %} current{% endif %}" href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
         {% endfor %}
@@ -25,120 +30,11 @@
     </div>
 </nav>
 <header id="banner" role="banner">
-    <h1><a id="title" href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+    <h1><a href="{{ "/" | relative_url }}"><span class="bracket">[</span><span id="title">{{ site.title }}</span><span class="bracket">]</span></a></h1>
 </header>
-{% if page.title == 'Home' %}
-<script>
-    var names = ["Cherrie", "Jacqui", "Jennifer", "Joseph", "Susan", "Tarushi", "{{ site.title }}"];
-    var i = 0;
-    var j = 0;
-    const element = document.getElementById("title");
-    setInterval(function() {
-        if (i < names.length){
-            if (j<names[i].length+8){
-                element.innerHTML = names[i].substring(0, j)+"|";
-                j+=1
-            }
-            else{
-                i+=1
-                j=0
-            }
-        }
-        else{
-            if (j % 30 > 12){
-                element.innerHTML = names[i-1]+"|";
-            }
-            else{
-                element.innerHTML = names[i-1];
-            }
-            j+=1
-        }
-        }, 50);
-</script>
-{% endif %}
 <main>
     {{ content }}
 </main>
-<script>
-$( function() {
-    $( "#glossary" ).accordion({
-        header: "dt",
-        collapsible: true,
-        heightStyle: "content"
-    });
-    $("#glossary dt").css("cursor", "pointer");
-} );
-// Hamburger code sourced from https://codepen.io/unleashalicia/pen/YzXrJBN
-// jQuery element variables
-var $hamburgerMenuBtn,
-    $slideNav,
-    $closeBtn,
-    $main;
-
-// focus management variables
-var $focusableInNav,
-    $firstFocusableElement,
-    $lastFocusableElement;
-
-$(document).ready(function() {
-  $hamburgerMenuBtn = $("#hamburger-menu"),
-    $slideNav = $("#slide-nav"),
-    $closeBtn = $("#close"),
-    $main = $("main"),
-    $focusableInNav = $('#slide-nav button, #slide-nav [href], #slide-nav input, #slide-nav select, #slide-nav textarea, #slide-nav [tabindex]:not([tabindex="-1"])');
-  if ($focusableInNav.length) {
-    $firstFocusableElement = $focusableInNav.first();
-    $lastFocusableElement = $focusableInNav.last();
-  }
-  addEventListeners();
-});
-
-function addEventListeners() {
-  $hamburgerMenuBtn.click(openNav);
-  $closeBtn.click(closeNav);
-  $slideNav.on("keyup", closeNav);
-  $firstFocusableElement.on("keydown", moveFocusToBottom);
-  $lastFocusableElement.on("keydown", moveFocusToTop);
-}
-
-function openNav() {
-  $slideNav.addClass("visible active");
-  setTimeout(function() {
-    $firstFocusableElement.focus()
-  }, 1);
-  $main.attr("aria-hidden", "true");
-  $hamburgerMenuBtn.attr("aria-hidden", "true");
-}
-
-function closeNav(e) {
-  if (e.type === "keyup" && e.key !== "Escape") {
-    return;
-  }
-
-  $slideNav.removeClass("active");
-  $main.removeAttr("aria-hidden");
-  $hamburgerMenuBtn.removeAttr("aria-hidden");
-  setTimeout(function() {
-    $hamburgerMenuBtn.focus()
-  }, 1);
-  setTimeout(function() {
-    $slideNav.removeClass("visible")
-  }, 501);
-}
-
-function moveFocusToTop(e) {
-  if (e.key === "Tab" && !e.shiftKey) {
-    e.preventDefault();
-    $firstFocusableElement.focus();
-  }
-}
-
-function moveFocusToBottom(e) {
-  if (e.key === "Tab" && e.shiftKey) {
-    e.preventDefault();
-    $lastFocusableElement.focus()
-  }
-}
-</script>
+<script src="{{ "/js/scripts.js" | relative_url }}"></script>
 </body>
 </html>
