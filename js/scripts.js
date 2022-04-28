@@ -1,18 +1,18 @@
 // Typing Effect for Site Title
 var site_title = $('.home #title');
-site_title_text = site_title.text();
-//site_title.empty();
-var typed_options = {
-    strings: ["","Cherrie","Jacqui", "Jennifer", "Joseph", "Susan", "Tarushi", site_title_text],
-    typeSpeed: 70,
-    backSpeed: 70,
-    backDelay: 1000,
-    startDelay: 1000,
-    showCursor:false
-};
+if (site_title.length != 0) {
+    site_title_text = site_title.text();
+    var typed_options = {
+        strings: ["","Cherrie","Jacqui", "Jennifer", "Joseph", "Susan", "Tarushi", site_title_text],
+        typeSpeed: 70,
+        backSpeed: 70,
+        backDelay: 1000,
+        startDelay: 1000,
+        showCursor:false
+    };
 
-var typed = new Typed('.home #title', typed_options);
-
+    var typed = new Typed('.home #title', typed_options);
+  }
 
 // Hamburger code sourced from https://codepen.io/unleashalicia/pen/YzXrJBN
 // jQuery element variables
