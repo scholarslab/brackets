@@ -19,15 +19,22 @@ p {
 
 */
 
+$dark-blue: rgb(13,20,64);
+$pink: rgb(191,98,151);
+$yellow: rgb(250,200,72);
+$red: rgb(191,50,52);
+$dark-teal: rgb(8,130,116);
+$teal: rgb(104,214,179);
+
 $text-color: #333;
-$link-color: #620260;
+$link-color: $dark-teal;
 $link-color-visited: rgba($link-color,0.9);
 $link-color-hover: rgba($link-color, 0.8);
 $link-color-active: $text-color;
-$highlight-color: #fcca53;
+$highlight-color: $yellow;
 
-$background-color: #211e44;
-$background-color-alt: #5CB4E3;
+$background-color: $dark-blue;
+$background-color-alt: rgba($dark-blue, 0.5);
 
 * {
     box-sizing: border-box;
@@ -122,12 +129,22 @@ code {
 }
 
 blockquote {
-    background: rgba($highlight-color,0.2);
-    border-left: 10px solid rgba($highlight-color,0.4);
-    padding:40px;
+    background: url('../images/window-dots.png'), white;
+    background-repeat: no-repeat;
+    background-size: 60px, auto;
+    background-position: 10px 10px;
+    padding:40px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(black,0.1);
     margin:40px 0 40px 40px;
     position:relative;
     vertical-align: text-top;
+}
+
+blockquote p {
+    background: rgba($teal,0.65);
+    padding: 20px;
+    margin:20px 0 0;
 }
 
 
@@ -140,6 +157,7 @@ blockquote {
 /* Banner */
 #banner {
     background: rgba($background-color,1);
+    width: 100%;
 }
 
 #banner a {
@@ -164,6 +182,14 @@ blockquote {
 }
 .bracket {
     color: rgba(white,.25);
+}
+
+#banner canvas {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Main Content */
@@ -223,7 +249,7 @@ main {
     padding: 40px;
     font-size: 40px;
     margin-bottom: 2%;
-    background-color: $link-color;
+    background-color: $teal;
     font-weight: 100;
 }
 
