@@ -1,0 +1,38 @@
+---
+layout: page
+title: Publish
+summary: Going public with your website
+---
+<h2>Publishing your website (that you own)</h2>
+<p>
+    Congratulations, you now have a single-page website! Although the degree to which it is a *web* site might fall a bit short of your expectation since it lives only on your computer right now. Let's fix that by publishing it to a Web server.
+</p>
+<p>
+    Everything on the Web--HTML pages, images, cat videos, search engines, meme gifs--live on computers called servers that <i>"host"</i> them so they are accessible to visitors. You can run server software on your personal computer and host your website through it, but that's not a good idea for a number of reasons, including the fact that it would become inaccessible every time you powered off your computer or disconnected it from the Internet. Instead, people typically use dedicated services to host their websites. Some of these are completely free, some cost a monthly fee, and a few really huge and complex sites require the resources of a small country to operate. Many universities will offer free or low cost hosting for their students, faculty, and staff. 
+</p>
+<p>
+    The fact that you have a choice of where to host your website is important to consider. Services like Squarespace are all-in-one solutions that bundle together hosting with pre-made design templates. In addition to the monthly fee, the cost of that approach is that you do not truly own your site. You cannot move it somewhere else because even though you control your content, the actual HTML, CSS, and JavaScript files that make up the site belong to someone else. The HTML and CSS files you've created through this tutorial are wholly your own, forever. When you publish them to a server, you don't give up any rights to them. When a hosting service goes out of business, changes their terms of service, or raises their prices, you can choose from a vast ocean of alternatives.
+</p>
+<h2>Github Pages</h2>
+<p>
+    One common and free way to publish a website is through Github. Github is an online code repository service where programmers share their code and collaborate on software development projects. Github offers web hosting through a feature called Github Pages, within reasonable transfer limits. Github is named after the Git version control system, which is a popular piece of software that allows programers to work on code together. We'll have to use Git to "push" our HTML, CSS, and image files to Github, which is made easier if we have Visual Studio Code installed (as described in the environment setup page).
+</p>
+<p>
+    To accomplish this, we can follow the instructions listed on the <a href="https://pages.github.com/">Github Pages site</a>. You can use either the instructions for a terminal (use the Terminal inside of Visual Studio Code) or the Github Desktop client. In either case, step 3 includes creating a sample index.html file. Since we already have our own, we can ignore this step. Instead, copy over all the files (HTML, CSS, and images) to the folder we created when we cloned our Git repository in step 2 and then add/commit and push them (step 4). If you want to read up more on Git or Github, refer to <a href="https://docs.github.com/en/pages">the Github Pages documentation</a> or refer to the <a href="https://education.github.com/git-cheat-sheet-education.pdf">Github Git Cheat Sheet</a>.
+</p>
+<p>
+    Once you complete the Github Pages instructions, your site will be published to <i>https://yourusername.github.io</i>. If you want to puchase a custom domain for your site, it is easy to set that up by purchasing a domain through a domain registrar and then <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">telling Github about it.</a>
+</p>
+<p>
+    Github, a subsidary of Microsoft, is one of several online code repositories that offer free website hosting and there may be technical or <a href="https://www.theatlantic.com/technology/archive/2020/01/ice-contract-github-sparks-developer-protests/604339/">political</a> reasons to choose or avoid it. An alternative to Github Pages that functions very similarly is <a href="https://docs.gitlab.com/ee/user/project/pages/">GitLab Pages</a>.
+</p>
+<h2>Alternatives (Reclaim and Institutional hosting)</h2>
+<p>
+    Another popular, although not free choice is <a href="https://reclaimhosting.com/">Reclaim Hosting</a>, a hosting service specifically intended for use in education. For a minimal annual fee, Reclaim provides a custom domain and the ability to host a variety of Web applications, including Content Management Systems like Wordpress and digital collections software like Omeka, as well as direct hosting of website files through Apache.
+</p>
+<p>
+    Apache is an open source project that is the most common web server software on the Web. To host the HTML, CSS, and image files for your website on Apache through Reclaim, simply follow <a href="https://support.reclaimhosting.com/hc/en-us/articles/1500007802262-Uploading-Folders-Files#uploading-folders-files-0-0">the instructions to upload those files</a> to the <i>public_html</i> directory on Reclaim.
+</p>
+<p>
+    Some institutions offer free web hosting for students, faculty, and staff. In some cases, including the <a href="https://uvacreate.virginia.edu/">University of Virginia's UVA Create</a> service, this is a basic Reclaim Hosting account subsidized by the school and the same process above applies. Otherwise, there are too many different ways hosting can be provided to detail here, but many of them provide direct access to a web server like Apache and typically just require uploading or copying the files to a particular directory.
+</p>
