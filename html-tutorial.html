@@ -149,6 +149,41 @@ title: HTML Tutorial
 
 <p>You have already encountered the other code used in this section above: unordered lists; list items; and link tags.</p>
 
+<h3>Part II: CSS</h3>
+<p></p>
+
+<p>If you have been opening your index.html file on your web browser, you will see that it looks quite simple–black text on a white background. This is because web browsers have in-built default styling which makes content appear the way it does. In order to modify the presentation and appearance of your webpage, you will use CSS. Download the style.css file, and make sure that it is in the same folder as the index.html file.</p>
+
+<p>The fourth line of code included in the header of your index.html file will make sure that the style.css file you have downloaded will be integrated into your webpage. To check, refresh the webpage on your web browser–it should look different now! As you modify this template to more closely align with your design goals and aesthetics, you might find it useful to refer back to our <a href="https://brackets.scholarslab.org/design-ethos/">Design Ethos page.</a></p>
+
+<p>Let’s talk about the technical aspects of the code now. This <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">Resource for Developers by Mozilla</a> is a great primer. Here, we will highlight some of the key aspects you will need to keep in mind.</p>
+
+<p>Just like in the case of HTML, it is important to first learn how to <i>read</i> the CSS. CSS code is composed of <i>rulesets</i> (or rules). The ruleset is composed of a <i>selector</i> and a <i>declaration</i>.  Everything included in the screenshot below comprises a ruleset. Let’s break down the individual elements.</p>
+
+<img src="/h2_selector.png" alt="Screenshot of h2 code" Align="center"/>
+
+<p><ol value="1" type="1">
+    <li>Selector: The selector is the name of the HTML element you would like to style; it opens the ruleset. Here, the selector is h2.</li>
+    <li>Declaration: The declaration is composed of two elements – <i>property</i> and <i>property value</i>. Property refers to that attribute which you want to modify (here, background color) and property value refers to the option or value you want to assign to the property (here, the color “orchid”).</li>
+    <li>When writing out CSS, there are a few syntax rules to keep in mind: <ul type="disk">
+        <li>The declaration (property + property value) are enclosed within <i>curly braces</i>.
+        <li>The property and property value are separated by a colon.</li>
+        <li>You can have multiple declarations within your curly braces each of which are defining different stylistic properties (as we do in the case of the code associated with the selector “html” in the template we have provided). Each of these declarations should be separated by a semicolon and should, for the sake of clarity, be on a new line.</li>
+    </ul></li>
+</ol></p>
+
+<p>Now let’s look at the CSS code provided in the template as a whole.</p>
+
+<img src="/css_entire.png" alt="Screenshot of entire CSS code" Align="center"/>
+
+<p>CSS allows you to lay out a hierarchy of properties and values. For the most part, your computer will read CSS from top to bottom and whichever is the last definition it encounters, that is the way it will encode your webpage. This principle or rule is called "cascade". Does that sound familiar? Remember what CSS stands for? We'll give you a moment. Yep, CSS stands for <i>Cascading</i> Style Sheet, and this is precisely what is meant by Cascading. </p>
+
+<p>In our template, there are two selectors: html { } and h2{ }. While the properties in html { } apply to the entirety of your HTML content, you can target specific sections of your webpage using a variety of selectors. h2 { } is one of the selectors that you can use. Here, we have defined a background color for the h2 elements of your HTML document which is different from the rest of the content. Because the h2 selector comes after the html selector, your computer will use this latest bit of code to format the h2 elements of your webpage. This means that the background color for the h2 elements will override the color specified within the html selector for your level 2 headings.</p>
+
+<p>What might be different, or at least not immediately familiar, are the margin and padding properties. <a href="https://blog.hubspot.com/website/css-margin-vs-padding#:~:text=In%20CSS%2C%20a%20margin%20is,the%20space%20inside%20an%20element.">This blogpost</a> written by Jamie Juviler provides a great explanation; to quote him: “In CSS, a margin is the space around an element’s border, while padding is the space between an element’s border and the element’s content. Put another way, the margin property controls the space outside an element, and the padding property controls the space inside an element.” A pretty handy feature of VS Code is that as you begin coding your stylesheet, it will show you options for properties and property values that you might want to play with. Of course, as mentioned earlier, there are great options available online, and we particularly like this <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">Mozilla page for Developers</a>.</p>
+
+
+
 <h3>Experimenting On Your Own</h3>
 <p></p>
 
