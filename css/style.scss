@@ -142,6 +142,18 @@ blockquote {
     background: rgba($background-color,1);
 }
 
+#banner a {
+    text-decoration:none;
+    &:link,
+    &:visited {
+        color: rgba(white,0.875);
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color:white;
+    }
+}
 .home #banner a {
     display:flex;
     justify-content: space-between;
@@ -151,8 +163,9 @@ blockquote {
     margin: 0 2px;
 }
 .bracket {
-    color: rgba(white,.125);
+    color: rgba(white,.25);
 }
+
 /* Main Content */
 main {
     padding: 20px;
@@ -172,24 +185,19 @@ main {
             margin:0;
             font-size: 30px;
         }
-
+        nav {
+            display:none;
+        }
         /*
         Typing animation courtesy of https://css-tricks.com/snippets/css/typewriter-effect/
         */
 
         a {
-            color: $link-color;
-            text-decoration:none;
             display:block;
             line-height:1;
             overflow-x: hidden; /* Ensures the content is not revealed until the animation */
             white-space: nowrap; /* Keeps the content on a single line */
             letter-spacing: .15em; /* Adjust as needed */
-        }
-
-        :hover,:focus {
-            color: $link-color-hover;
-            background:none;
         }
 
     }
@@ -200,39 +208,37 @@ main {
 .lesson-navigation {
     display: flex;
     flex-direction: row;
+    flex-wrap:wrap;
     justify-content: space-between;
     width: 100%;
 }
-
-.lesson-navigation a,
-.lesson-navigation a:visited {
+.lesson-navigation a {
+    display:flex;
+    min-height: 200px;
+    flex-direction: column;
     text-decoration:none;
-    background-color: $link-color;
+    justify-content: left;
     color: white;
-    text-align: center;
-    border-radius: 10px;
-    font-size: 24px;
-    padding: 5px;
+    width: 49%;
+    padding: 40px;
+    font-size: 40px;
+    margin-bottom: 2%;
+    background-color: $link-color;
+    font-weight: 100;
 }
 
+.lesson-navigation a span {
+    font-size: 20px;
+    margin-top: 8px;
+    color: rgba(white,0.8);
+}
 .lesson-navigation a:hover,
 .lesson-navigation a:focus {
     background-color: $link-color-hover;
 }
 
-.previous:before {
-    content: "< ";
-}
-
-.next:after {
-    content: " >"
-}
-
-#start {
-    display:block;
-    margin: 40px auto;
-    font-weight: bold;
-    padding: 20px 30px;
+.lesson-navigation .glossary {
+    display:none;
 }
 
 article > h1 {
@@ -256,93 +262,11 @@ article > h1 {
     margin:0 0 1em;
 }
 
-/* Hamburger menu code sourced from https://codepen.io/unleashalicia/pen/YzXrJBN */
-#global_navigation {
-    position:absolute;
-    top:0;
-    right:0;
-}
-#global_navigation ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-}
-#global_navigation button {
-    cursor: pointer;
-}
-button.open-nav-btn {
-  font-size: 1.5rem;
-  border: 1px solid black;
-  background-color: transparent;
-  margin: 10px;
-}
-
-.slide-content {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: black;
-  overflow-x: hidden;
-  transition: width 0.5s;
-  padding-top: 60px;
-  visibility: hidden;
-}
-
-.slide-content a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #F5F5F5;
-  display: block;
-}
-
-.slide-content a:focus,
-.slide-content button:focus {
-  outline: 2px solid orange;
-}
-
-#global_navigation a:focus,
-.open-nav-btn:focus {
-  outline: 2px solid blue;
-  outline-offset: 5px;
-}
-
-.close-btn {
-  font-size: 25px;
-  color: #F5F5F5;
-  background-color: transparent;
-  border: none;
-}
-
-.slide-content a:hover,
-.slide-content a:focus {
-  text-decoration: underline;
-}
-
-.slide-content .close-btn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.visible {
-  visibility: visible;
-}
-
-.active {
-  width: 250px;
-}
-
 @media screen and (min-width: 900px) {
 
     body {
         display:flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
     }
 
     body > * {
@@ -352,6 +276,7 @@ button.open-nav-btn {
     #banner {
         max-width: 200px;
         min-width: 200px;
+        padding: 20px;
     }
 
     .home #banner {
@@ -368,16 +293,19 @@ button.open-nav-btn {
         font-size: 80px;
     }
 
-    #global_navigation,
-    .slide-content {
-        position: fixed;
-        left:0;
-        right: unset;
+    #global_navigation a {
+        display:block;
+        text-decoration:none;
     }
 
     main, {
-        padding: 80px;
+        padding: 80px 80px 0;
         width: auto;
+    }
+
+    .home main {
+        margin: auto;
+        max-width: 1100px;
     }
 }
 

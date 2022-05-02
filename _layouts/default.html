@@ -13,24 +13,19 @@
   crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <body class="{{ page.title | slugify }}">
-<nav id="global_navigation">
-        <button type="button" id="hamburger-menu" class="open-nav-btn" aria-label="open navigation" aria-controls="link-list" aria-expanded="false">&#9776;</button>
-        <div id="slide-nav" class="slide-content">
-        <button type="button" id="close" class="close-btn" aria-label="close navigation">&times;</button>
-        <ul id="link-list">
-        {% for item in site.lesson_navigation %}
-        {% assign link = site.pages | where_exp: "page", "page.url contains item" | first %}
-        <li><a class="{{ item }}{% if page.url == link.url %} current{% endif %}" href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
-        {% endfor %}
-        {% for item in site.complementary_navigation %}
-        {% assign link = site.pages | where_exp: "page", "page.url contains item" | first %}
-        <li><a class="{{ item }}{% if page.url == link.url %} current{% endif %}" href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
-        {% endfor %}
-        </ul>
-    </div>
-</nav>
+
 <header id="banner" role="banner">
     <h1><a href="{{ "/" | relative_url }}"><span class="bracket">[</span><span id="title">{{ site.title }}</span><span class="bracket">]</span></a></h1>
+    <nav id="global_navigation">
+      {% for item in site.lesson_navigation %}
+      {% assign link = site.pages | where_exp: "page", "page.url contains item" | first %}
+      <a class="{{ item }}{% if page.url == link.url %} current{% endif %}" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+      {% endfor %}
+      {% for item in site.complementary_navigation %}
+      {% assign link = site.pages | where_exp: "page", "page.url contains item" | first %}
+      <a class="{{ item }}{% if page.url == link.url %} current{% endif %}" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+      {% endfor %}
+    </nav>
 </header>
 <main>
     {{ content }}
