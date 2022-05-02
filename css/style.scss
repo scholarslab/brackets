@@ -1,6 +1,6 @@
 ---
 ---
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,700;1,100&family=Karla:wght@200;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,700;1,100&family=Karla:wght@300;800&display=swap');
 
 /*
 
@@ -19,6 +19,16 @@ p {
 
 */
 
+$text-color: #333;
+$link-color: #620260;
+$link-color-visited: rgba($link-color,0.9);
+$link-color-hover: rgba($link-color, 0.8);
+$link-color-active: $text-color;
+$highlight-color: #fcca53;
+
+$background-color: #211e44;
+$background-color-alt: #5CB4E3;
+
 * {
     box-sizing: border-box;
 }
@@ -31,9 +41,10 @@ body {
 
 html{
     font-family: 'Karla', sans-serif;
-    color: #333;
+    color: $text-color;
     background-color: #fafafa;
     font-size: 24px;
+    line-height: 32px;
     margin:0;
 }
 
@@ -43,16 +54,16 @@ body {
 }
 
 a,a:link {
-    color: rgba(0,200,200,.875);
+    color: $link-color;
 }
 a:visited {
-    color:rgba(0,200,200,0.875);
+    color: $link-color-visited;
 }
 a:hover,a:focus,a.current {
-    color:rgba(0,200,200,1);
+    color: $link-color-hover;
 }
 a:active {
-    color: #333;
+    color: $link-color-active;
 }
 
 img {
@@ -66,7 +77,6 @@ h1,h2,h3 {
 }
 
 h1 {
-    color: rgba(0,0,0, .675);
     font-variant: small-caps;
     letter-spacing: 3px;
     font-weight: 100;
@@ -74,7 +84,7 @@ h1 {
 }
 
 h2 {
-    color: rgba(0,0,0, .8);
+    color: rgba($text-color, .8);
     font-variant: small-caps;
     letter-spacing: 1px;
     font-weight: 150;
@@ -90,7 +100,7 @@ h3,h4 {
 }
 
 h4 {
-    color: rgba(0,0,0,0.5);
+    color: rgba($text-color,0.8);
     font-variant: small-caps;
 }
 
@@ -108,12 +118,12 @@ p + h2 {
 }
 
 code {
-    background-color: rgba(0,200,200,0.1);
+    background-color: rgba($highlight-color,0.2);
 }
 
 blockquote {
-    background: rgba(0,200,200,0.1);
-    border-left: 10px solid rgba(0,200,200,0.4);
+    background: rgba($highlight-color,0.2);
+    border-left: 10px solid rgba($highlight-color,0.4);
     padding:40px;
     margin:40px 0 40px 40px;
     position:relative;
@@ -129,7 +139,7 @@ blockquote {
 
 /* Banner */
 #banner {
-    background: rgba(0,0,0,0.825);
+    background: rgba($background-color,1);
 }
 
 .home #banner a {
@@ -141,7 +151,7 @@ blockquote {
     margin: 0 2px;
 }
 .bracket {
-    color: rgba(255,255,255,.125);
+    color: rgba(white,.125);
 }
 /* Main Content */
 main {
@@ -168,7 +178,7 @@ main {
         */
 
         a {
-            color: rgba(0,200,200,0.75);
+            color: $link-color;
             text-decoration:none;
             display:block;
             line-height:1;
@@ -178,7 +188,7 @@ main {
         }
 
         :hover,:focus {
-            color: rgba(0,200,200,0.95);
+            color: $link-color-hover;
             background:none;
         }
 
@@ -197,7 +207,7 @@ main {
 .lesson-navigation a,
 .lesson-navigation a:visited {
     text-decoration:none;
-    background-color: rgba(0,220,220,1);
+    background-color: $link-color;
     color: white;
     text-align: center;
     border-radius: 10px;
@@ -207,7 +217,7 @@ main {
 
 .lesson-navigation a:hover,
 .lesson-navigation a:focus {
-    background-color: rgba(0,220,220,0.8);
+    background-color: $link-color-hover;
 }
 
 .previous:before {
@@ -389,18 +399,18 @@ button.open-nav-btn {
     text-decoration:none;
     padding: 20px 60px;
     flex-basis: 40%;
-    background: rgba(0,200,200,0.25);
+    background: rgba($background-color-alt,0.375);
 }
 
 #tabs .ui-tabs-nav a:hover {
-    background: rgba(0,200,200,0.175);
+    background: rgba($background-color-alt,0.25);
 }
 #tabs .ui-tabs-active a {
-    background: rgba(0,200,200,0.125);
+    background: rgba($background-color-alt,0.375);
 }
 
 #tabs section {
-    background: rgba(0,200,200,0.125);
+    background: rgba($background-color-alt,0.375);
     margin:0 -80px;
     padding: 40px 80px;
 }
