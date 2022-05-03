@@ -333,20 +333,20 @@ article header p {
 }
 
 #glossary dt {
+    font-family:'Red Hat Mono';
     font-weight: 800;
-    padding-left: 1em;
 }
 #glossary dt span:before {
-    content: "▶";
-    font-size: 12px;
-    color:rgba(0,0,0, .5)
+    content: "▶   ";
+    font-size: 20px;
+    color: $teal
 }
 #glossary dt.ui-state-active span:before {
-    content: "▼";
-    color:rgba(0,0,0, .8)
+    content: "▼   ";
+    color: $dark-teal
 }
 #glossary dd {
-    margin:0 0 1em;
+    margin:0 .6em 1em;
 }
 
 @media screen and (min-width: 900px) {
