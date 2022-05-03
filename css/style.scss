@@ -200,8 +200,9 @@ blockquote p {
 #banner {
     background: rgba($background-color,1);
     width: 100%;
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 20px;
 }
-
 #banner h1 {
     font-family: 'Red Hat Mono', monospace;
     text-transform: lowercase;
@@ -210,6 +211,7 @@ blockquote p {
     line-height: 30px;
     font-weight: 700;
     font-size: 24px;
+    z-index:100;
 }
 #banner a {
     text-decoration:none;
@@ -380,9 +382,25 @@ article header p {
         font-size: 80px;
     }
 
-    #global_navigation a {
-        display:block;
-        text-decoration:none;
+    #global_navigation {
+        margin-top: 50px;
+        a {
+            display:block;
+            text-decoration:none;
+            line-height: 1;
+            padding: 16px 0;
+            border: 2px dashed rgba(white,0.5);
+            border-width: 0 0 2px;
+
+            &:first-of-type {
+                border-width: 2px 0;
+            }
+
+            &:hover,
+            &:focus {
+                background-color:rgba(0,0,0,0.75);
+            }
+        }
     }
 
     main, {
