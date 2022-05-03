@@ -136,6 +136,10 @@ h2 {
 h3 {
     font-size: 1.25em;
     font-weight: 700;
+
+    .credit & {
+        font-size: 1em;
+    }
 }
 
 h4 {
