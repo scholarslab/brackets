@@ -3,10 +3,8 @@ layout: lesson
 title: HTML & CSS Tutorial
 summary: A walkthrough guide for coding and creating your own site.
 ---
-<ol type="1" value="1">
 
-<h3>Getting Started</h3>
-<p></p>
+<h2>Getting Started</h2>
 
 <p>In this section you will be downloading a zip file containing two template documents. Our tutorial will guide you through understanding what these two documents are, the purposes they serve, and how they work in tandem to form the backbone of your personal portfolio site. Take a moment now to download the file <i>brackets.zip</i>. We suggest you save it in your home directory or your documents folder. This will be your starter kit and you will edit it through Visual Studio Code.</p>
 
@@ -25,52 +23,48 @@ summary: A walkthrough guide for coding and creating your own site.
 
 <p>The second file included in your starter pack is a <i>style.css</i> file. CSS stands for "Cascading Style Sheet" and this type of file is used to “style” the contents of an associated webpage. This .css file works in tandem with the <i>content</i> contained in an .html file to describe the <i>presentation</i> of that content. Think of your HTML document as laying out the text and structure of your page while CSS describes how that text is interpreted by the audience’s senses. Presentation encompasses how a page in a web browser or assistive technologies like screen readers should interpret the text. It is where you will define, among other things, the font and background color of your website, how the text is laid out, and how emphasis is emphasized. The standard naming convention for a Cascading Style Sheet is <i>style.css</i>.</p>
 
-<h3>Part I: HTML</h3>
-<p></p>
+<h2>Part I: HTML</h2>
 
 <h4>A Quick Primer</h4>
-<p></p>
+
 <p>Before we talk about specific HTML code, a quick primer on how to read HTML will be useful. HTML makes use of what are called <i>elements</i>, <i>tags</i>, and <i>attributes</i>.</p>
 
 <p><ul type="disk">
 <li><i>Elements</i> are the fundamental building blocks of an HTML page, and they are used to define the way in which particular content looks or functions. Elements are composed of tags, attributes, and content.</li>
-<li><i>Tags</i> are used to indicate the way in which you want to structure particular content. A tag often appears in pairs with an opening and a closing tag, although this is not always the case (e.g., the image tag). If you want text to appear as a paragraph, for example, you would use the </li>
-<li>Sometimes the opening tag (the first tag of the pair) might have a modifier to further explain the way in which you want the tag to function. This modifier is called an <i>attribute</i>. You will see attributes used in the case of link and image tags, for example. We speak at more length about these two tags below, but just to help you get a clearer sense of an attribute, here is the code to embed a link onto a web page: &lta href=“brackets.scholarslab.org”&gtYour Name Here&lt/a&gt The “href”, here–which is followed by the url–is the attribute. It modifies the anchor tag (&lta&gt&lt/a&gt) by specifying the exact url you want to link to.</li>  
+<li><i>Tags</i> are used to indicate the way in which you want to structure particular content. A tag often appears in pairs with an opening and a closing tag, although this is not always the case (e.g., the image tag). If you want text to appear as a paragraph, for example, you would use the &ltp&gt&lt/p&gt tag, and you would write out the code as follows:  &ltp&gttext content&lt/p&gt.</li>
+<li>Sometimes the opening tag (the first tag of the pair) might have a modifier to further explain the way in which you want the tag to function. This modifier is called an <i>attribute</i>. You will see attributes used in the case of link and image tags, for example. We speak at more length about these two tags below, but just to help you get a clearer sense of an attribute, here is the code to embed a link onto a web page: <code>&lta href=“brackets.scholarslab.org”&gtYour Name Here&lt/a&gt</code> The “href”, here–which is followed by the url–is the attribute. It modifies the anchor tag <code>&lta&gt&lt/a&gt</code> by specifying the exact url you want to link to.</li>  
 <li>It is also important to note that when writing code, <i>case matters</i>, as does <i>spacing</i>. So, style.css, Style.css, Style.CSS, S tyle.css, S_tyle.css are all different. It is considered best practice to avoid spaces as much as possible.
 </li>  
 </ul></p>
 
 <p>This <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">Mozilla developer webpage</a> is a great primer on HTML, if you would like to explore further.</p>
 
-<p>It can often be fun, gratifying, and helpful to be able to see the code you write update your webpage in real time. You can keep a track of the changes to your webpage and see how your code functions by opening the index.html file in your web browser. In order to do this, either double-click on index.html in Finder/File Explorer or type the following command in the terminal: open[space]index.html</p>
+<p>It can often be fun, gratifying, and helpful to be able to see the code you write update your webpage in real time. You can keep a track of the changes to your webpage and see how your code functions by opening the index.html file in your web browser. In order to do this, either double-click on index.html in Finder/File Explorer or type the following command in the terminal: <code>open[space]index.html</code></p>
 
 <h4>Opening Boilerplate Code</h4>
-<p></p>
 <p>This is boilerplate code which comes at the top of your HTML file. Information and code included here works behind the scenes of your webpage. There are many templates for this boilerplate code which you could copy and paste as is; for example, you could use the code included in the template we have provided you and just change the text enclosed within the “title” tags to reflect your website name. Another possible template you might choose to use is the one given on this <a href= "https://www.toptal.com/developers/htmlshell">website</a>. Most of this code is pretty routine, and if you are interested in a more detailed explanation of the function of each attribute and tag used here, refer to <a href="https://www.w3schools.com/w3css/w3css_web_html.asp">this page</a>.</p>
 
-<p>One note on the fourth line of code: that line of code references the CSS file you will be creating and which will work in conjunction with the HTML file to finally create your webpage. The text included in quotation marks after href (“style.css”) is the name of the CSS file. While you can name your CSS file however you choose, style.css is most conventional. Basically, CSS stands for "Cascading Style Sheet." Coding with CSS will help style the content in your HTML document. CSS describes how the elements in your HTML document should be displayed, and helps specify elements of the web page such as typography, color, and sizing. Think of your HTML document as laying out the basic bones of your web page while CSS gives it its distinct appearance and look.  
+<p>One note on the fourth line of code: that line of code references the CSS file you will be creating and which will work in conjunction with the HTML file to finally create your webpage. The text included in quotation marks after <code>href</code> (“style.css”) is the name of the CSS file. While you can name your CSS file however you choose, style.css is most conventional. Basically, CSS stands for "Cascading Style Sheet." Coding with CSS will help style the content in your HTML document. CSS describes how the elements in your HTML document should be displayed, and helps specify elements of the web page such as typography, color, and sizing. Think of your HTML document as laying out the basic bones of your web page while CSS gives it its distinct appearance and look.  
 </p>
 <p>Consider these two memes which we think capture how CSS works with HTML to give your webpage its look and appearance. </p>
 
 <h4>Header, Headings, Main </h4>
-<p></p>
 
 <img src="/header.png" alt="Header Screenshot" Align="center"/>
 
-<p>&ltheader&gt&lt/header&gt: Information included within the header tag forms the introductory content for your webpage or can include navigational links to other parts of your website. For example, here, within the header tags, we are specifying the “banner” for our webpage (hence, role=“banner”). In other words, we are specifying the title of our webpage which will be visible at the top to any visitor who comes to the page.</p>
+<p><code>&ltheader&gt&lt/header&gt</code>: Information included within the header tag forms the introductory content for your webpage or can include navigational links to other parts of your website. For example, here, within the header tags, we are specifying the “banner” for our webpage (hence, role=“banner”). In other words, we are specifying the title of our webpage which will be visible at the top to any visitor who comes to the page.</p>
 
-<p>&lth1&gt&lt/h1&gt: These are heading tags. Headings range from &lth1&gt to &lth6&gt, with &lth1&gt being the most important and &lth6&gt being the least. As this Mozilla page helpfully explains, think of these tags as defining headings and subheadings, such that &lth1&gt gives the title of the book, with subsequent heading tags defining chapter titles, section titles, sub-section names, so on and so forth. Generally, a web page will make use of only one &lth1&gt tag but could use multiple &lth2&gt, &lth3&gt, etc. tags depending on the organization of information and sections on the page.</p> 
+<p><code>&lth1&gt&lt/h1&gt</code>: These are heading tags. Headings range from <code>&lth1&gt</code> to <code>&lth6&gt</code>, with <code>&lth1&gt</code> being the most important and <code>&lth6&gt</code> being the least. As this Mozilla page helpfully explains, think of these tags as defining headings and subheadings, such that &lth1&gt gives the title of the book, with subsequent heading tags defining chapter titles, section titles, sub-section names, so on and so forth. Generally, a web page will make use of only one <code>&lth1&gt</code> tag but could use multiple <code>&lth2&gt</code>, <code>&lth3&gt</code>, etc. tags depending on the organization of information and sections on the page.</p> 
 
 <p>This image might help understand this better:</p>
 
 <img src="/headings_example.png" alt="Visual Example of Headings" Align="center"/>
 
-<p>&ltmain&gt&lt/main&gt: Content enclosed within the main tags refers to the main content of the webpage; think of it as the body of the document. This content can then be subdivided into sections as we have done in the template provided.</p>
+<p><code>&ltmain&gt&lt/main&gt</code>: Content enclosed within the main tags refers to the main content of the webpage; think of it as the body of the document. This content can then be subdivided into sections as we have done in the template provided.</p>
 
 <h4>Section I: “A Welcome Note”</h4>
-<p></p>
 
-<p>We have chosen to call this section “A Welcome Note.” On most personal portfolio websites, this would be akin to a "landing" or an "about me" page where you might choose to introduce yourself to visitors who stop by your website. You <i>do not have to</i> define yourself solely, initially, or primarily in terms of your institutional affiliations and academic achievement. Do with this description as you will. Perhaps you might take inspiration from the writing prompts we’ve shared in the <a href="https://brackets.scholarslab.org/individuality-solidarity/">“Individuality and Solidarity”</a> section of the <i>Your Name Here</i> website.</p>
+<p>We have chosen to call this section “A Welcome Note.” On most personal portfolio websites, this would be akin to a "landing" or an "about me" page where you might choose to introduce yourself to visitors who stop by your website. You <i>do not have to</i> define yourself solely, initially, or primarily in terms of your institutional affiliations and academic achievement. Do with this description as you will. Perhaps you might take inspiration from the writing prompts we’ve shared in the <a href="https://brackets.scholarslab.org/individuality-solidarity/">“Individuality and Solidarity”</a> section of the <i>[Your Name Here]</i> website.</p>
 
 <p>Another function of this section (or you could make a separate section) is to welcome visitors in a way that readies or positions them to receive the content you’ve laid out on your page. Here, we take inspiration from Angela Balduzs’s beautiful <a href="https://www.angelainezbaldus.com/">webpage</a> which opens with a short letter to her visitors.</p>
 
@@ -80,80 +74,84 @@ summary: A walkthrough guide for coding and creating your own site.
 
 <p><ol type="1" value="1">
 
-    <li>&ltsection&gt&lt/section&gt: section tags will encompass all that goes into creating this particular section of your page. The utility of enclosing the content of a particular section in these tags is that if you want to style <i>solely</i> one section, you can easily refer to the section using the section id (here, “welcome”) included in the opening &ltsection&gt tag in, for example, the css file you create. We will say more about styling in the CSS section later. Just a note that this id will not be in any way “visible” on your live webpage.</li>
+    <li><code>&ltsection&gt&lt/section&gt</code>: section tags will encompass all that goes into creating this particular section of your page. The utility of enclosing the content of a particular section in these tags is that if you want to style <i>solely</i> one section, you can easily refer to the section using the section id (here, “welcome”) included in the opening <code>&ltsection&gt</code> tag in, for example, the css file you create. We will say more about styling in the CSS section later. Just a note that this id will not be in any way “visible” on your live webpage.</li>
     
-    <li>&lth2&gt&lt/h2&gt: these tags are a kind of header tag. The text you enclose within these tags <i>will</i> be displayed on your webpage. These tags are useful when setting off sections and giving them titles. We have already spoken about header tags earlier when discussing the &lth1&gt&lt/h1&gt tags. </li>
+    <li><code>&lth2&gt&lt/h2&gt</code>: these tags are a kind of header tag. The text you enclose within these tags <i>will</i> be displayed on your webpage. These tags are useful when setting off sections and giving them titles. We have already spoken about header tags earlier when discussing the <code>&lth1&gt&lt/h1&gt</code> tags. </li>
 
-    <li>&ltp&gt&lt/p&gt: these are paragraph tags. Text included within these tags will appear as a paragraph on your webpage. If you want text to appear in separate paragraphs, enclose each chunk within its own paragraph tags.</li>
+    <li><code>&ltp&gt&lt/p&gt</code>: these are paragraph tags. Text included within these tags will appear as a paragraph on your webpage. If you want text to appear in separate paragraphs, enclose each chunk within its own paragraph tags.</li>
 
-    <li>&lti&gt&lt/i&gt: these are italics tags. Text enclosed within these tags will appear in italics. “Bold” and “underline” are other forms of emphases you can format text with, and we will be discussing these emphases tags in a later section.</li>
+    <li><code>&lti&gt&lt/i&gt</code>: these are italics tags. Text enclosed within these tags will appear in italics. “Bold” and “underline” are other forms of emphases you can format text with, and we will be discussing these emphases tags in a later section.</li>
 
 </ol></p>
 
 <h4>Section II: “Scribblings, Ramblings, and Musings”</h4>
-<p></p>
+
 <p>We have chosen to title this section "Scribblings, Ramblings, Musings". Others might choose to limit this section to a list of academic publications. We have chosen to define this space in a capacious manner so that you can feel to include other types of work and collaborations that might otherwise be less valued in traditionally narrow tenure file rubrics. While we celebrate academic publications as important accomplishments you should feel welcome to include other things you have created. So go ahead, include a list and link to blog posts, short stores, knitting patterns you've published, or even any computational code you have composed. 
 </p>
 
-<p>After all, your website doesn't have to mimic the academic taxonomy found in your academic CV. We also recognize that for many graduate students, publishing in top-tiered peer-reviewed journals is a process rife with many challenges and a high barrier for entry. This can be attributed to a myriad of factors such as crippling imposter syndrome and a lack of time and resources attributed to disproportionately heavy teaching load, limited financial support, a lack of faculty or institutional support or <a href="https://press.princeton.edu/books/paperback/9780691201092/a-field-guide-to-grad-school">hidden curriculum</a>. It also takes time to develop and trust your voice. And we recognize that some people might also have an ethical commitment to publishing in open access journals or publication venues that extend the conversation beyond our academic chorus to a more general public. </p>
-<p>On to the task at hand. In this section we are going to show you how to create two different types of list: unordered and ordered lists. Simply put, these two types of list refer to bulleted or numbered information. To create a bulleted or numbered list on a word processor you simply click an icon in your toolbar. You can also do this using html. Let look at the following example. 
+<p>After all, your website doesn't have to mimic the taxonomy found in your academic CV. We also recognize that for many graduate students, publishing in top-tiered peer-reviewed journals is a process rife with many challenges and a high barrier for entry. This can be attributed to a myriad of factors such as crippling imposter syndrome and a lack of time and resources attributed to disproportionately heavy teaching load, limited financial support, a lack of faculty or institutional support or <a href="https://press.princeton.edu/books/paperback/9780691201092/a-field-guide-to-grad-school">hidden curriculum</a>. It also takes time to develop and trust your voice. And we recognize that some people might also have an ethical commitment to publishing in open access journals or publication venues that extend the conversation beyond our academic chorus to a more general public. </p>
+<p>On to the task at hand. In this section we are going to show you how to create two different types of list: unordered and ordered lists. Simply put, these two types of list refer to bulleted or numbered information. To create a bulleted or numbered list on a word processor you simply click an icon in your toolbar. You can also do this using html. Let's look at the following example. 
 </p>
 <img src="/scribblings.jpg" alt="Screenshot of Scribblings with examples of how to create different types of lists" Align="center"/>
 
+<p>In this code block you are looking at the "Scribbling, Rambling, Musing" section of your webpage. Notice how under the <code>&lth2&gt&lt/h2&gt</code> section heading there are two subsections, Blogging and Academic Publications. Each of these subsections contains a list nested within two tags.</p>
+
+<ol>
+    <li><code>&ltli&gt&lt/li&gt</code>: li tags are used to indicate that the text which it contains will appear in the form of a list. But what kind of list? Do you want that list bulleted or numbered? To do this, the &ltli&gt tags must be embedded within one of two other "parent" elements. These elements are as follows. </li>
+    <li><code>&ltol&gt&lt/ol&gt</code>: ol tags stand for ordered list. These tags are use to indicate that the list you are creating is a numbered list. To create an ordered or number list, indent and embedd the li elements with these tags. Ensure that the opening and closeing ol "parent" tags appear along the same margin and that the embedded and indented li elements appear one after the other.</li>
+    <li><code>&ltul&gt&lt/ul&gt</code>: These tags stand for unordered lists. And if if you hadn't already guessed they create a bulleted list. An unordered list is formatted in the same way you create a ordered list. To created a bulleted list, indent and embedd the li elements within these tags. Ensure that the opening and closeing ul "parent" tags appear along the same margin and that the embedded and indented li elements appear one after the other.</li>
+</ol>
+
 <h4>Section III: “My Surrounds”</h4>
-<p></p>
 
 <img src="/surrounds.png" alt="Screenshot of Surrounds Section code" Align="center"/>
 
 <p>This probably feels like a lot of complicated code, especially for those of us who are first time coders. Worry not, though–we’re going to break it down for you. Before we do that, though, let us talk a little bit about this particular section and why we chose to include it here.</p>
 
-<p>As we have been saying repeatedly, the academic space expects us to perform and portray a particular self–that of the consummate professional and intellectual. And the personal portfolio website is often made to function in service of this task, functioning like a professional calling card extolling your professional self and achievements. However, who says that your personal website can/should only include a professional mugshot on the home page, your institutional affiliations, your published works, and your CV? This particular section – “My Surrounds” – invites you to bring to the fore things–books, movies, recipes, songs, images–which have been sparking joy for you, things which have been thought provoking, interesting, enticing, fun – literally anything you have been engaging with and want to share. After all, these are just as interesting and formative a part of you as your more scholarly pursuits.</p>
+<p>As we have been saying repeatedly, the academic space expects us to perform and portray a particular self–that of the consummate professional and intellectual. And the personal portfolio website is often made to function in service of this task, like a calling card extolling your professional self and achievements. However, who says that your personal website can/should only include a professional mugshot on the home page, your institutional affiliations, your published works, and your CV? This particular section – “My Surrounds” – invites you to bring to the fore things – books, movies, recipes, songs, images–which have been sparking joy for you, things which have been thought provoking, interesting, enticing, fun – literally anything you have been engaging with and want to share. After all, these are just as interesting and formative a part of you as your more scholarly pursuits.</p>
 
 <p>Now, on to understanding the code. We have already spoken about the section and heading tags. Some of the new tags we have introduced here include the following:</p>
 
 <p><ol type="1" value="1">
 
-    <li>&lti frame&gt&lt/i frame&gt: Iframe tags open up a little window inside of your page to another page on the Web, often to “embed” content from other sites. Here, it is the tag we have used to embed some of our favorite Spotify playlists on the webpage. If we are being completely honest, we did not write this code ourselves! Spotify did it for us. If you hit the share button on a song or playlist you would like to share, the embed option will come up (this also the case for YouTube videos, for example). Just copy the code Spotify displays and paste it. You are all set now!</li>
+    <li><code>&ltiframe&gt&lt/iframe&gt</code>: Iframe tags open up a little window inside of your page to another page on the Web, often to “embed” content from other sites. Here, it is the tag we have used to embed some of our favorite Spotify playlists on the webpage. If we are being completely honest, we did not write this code ourselves! Spotify did it for us. If you hit the share button on a song or playlist you would like to share, the embed option will come up (this also the case for YouTube videos, for example). Just copy the code Spotify displays and paste it. You are all set now!</li>
 
-    <li><p>&lta href&gt&lt/a&gt: This tag is used to embed links; here, we have linked to a YouTube video of a Syrian Harissa recipe. The URL of the link you want to embed is included within quotation marks after the “=” sign following “href.” The text you would like to hyperlink (here, “Syrian Harissa (Basbousa) Recipe) comes in between the opening and closing tag.</p>
+    <li><p><code>&lta href&gt&lt/a&gt</code>: This tag is used to embed links; here, we have linked to a YouTube video of a Syrian Harissa recipe. The URL of the link you want to embed is included within quotation marks after the “=” sign following <code>href</code>. The text you would like to hyperlink (here, “Syrian Harissa (Basbousa) Recipe) comes in between the opening and closing tag.</p>
     
         <p>A good practice to keep in mind is not to use text such as “click here” which you then hyperlink; descriptive text is better. Text like “click here” is generally bad from the perspective of accessibility and is not parsable for those who use screen readers.
         </p>
     </li>
 
-    <li>&ltimg&gt: This tag is used to embed images on your webpage. This <a href="https://www.w3schools.com/html/html_images.asp#:~:text=The%20HTML%20tag%20is,not%20have%20a%20closing%20tag.">page</a> is a very helpful, detailed explanation of the image tag.  Summarily put: the file name after “src” is the name of the image file (src stands for source); width and height are used to specify image dimensions; “alt” is used to specify the alternate text you want to appear if someone hovers over the image (this is great for accessibility and inclusivity); and “Align” is meant to specify the positioning of the image on the webpage. A note: unlike many other tags, the image tag does not come in a pair; that is to say, all this information is enclosed within the greater-than-less-than carrots around “img” rather than being enclosed between &ltimg&gt&lt/img&gt.</li>
+    <li><code>&ltimg&gt</code>: This tag is used to embed images on your webpage. This <a href="https://www.w3schools.com/html/html_images.asp#:~:text=The%20HTML%20tag%20is,not%20have%20a%20closing%20tag.">page</a> is a very helpful, detailed explanation of the image tag.  Summarily put: the file name after <code>src</code> is the name of the image file (src stands for source); width and height are used to specify image dimensions; <code>alt</code> is used to specify the alternate text you want to appear if someone hovers over the image (this is great for accessibility and inclusivity); and <code>align</code> is meant to specify the positioning of the image on the webpage. A note: unlike many other tags, the image tag does not come in a pair; that is to say, all this information is enclosed within the greater-than-less-than carrots around <code>img</code> rather than being enclosed between <code>&ltimg&gt&lt/img&gt</code>.</li>
 
 </ol></p>
 
 <h4>Section IV: “Collaboration & Support”  </h4>
-<p></p>
 
 <img src="/Collaboration-Support.jpg" alt= "screenshot of collaboration and support with examples of how to create emphasis" Align="center"/>
-<p>Our first time using .html/ CSS was just 6 short months ago. Although tags like italics (&lti&gtletter/ word you want in italics&lt/i&gt) are as simple as you will find within this language, we are still memorizing the basics. Fear not, these skills will come with time. Whether it takes 6 months, or 6 years, you’re moving in the right direction. For us, we also learned the basics from a template just like this. </p>
+<p>Our first time using .html/ CSS was just 6 short months ago. Although tags like italics <code>&lti&gtletter/ word you want in italics&lt/i&gt</code> are as simple as you will find within this language, we are still memorizing the basics. Fear not, these skills will come with time. Whether it takes 6 months, or 6 years, you’re moving in the right direction. For us, we also learned the basics from a template just like this. </p>
 
 <p>Throughout the process of creating this project and looking at other academic and personal websites, the individuals that freely shared helpful information is what really resonated with us. Although concepts like open access, collaboration and support are often embraced within digital humanities, those sentiments are more rare within academia. This section — “Collaboration & Support” — is encouraging you to embrace this community spirit by openly sharing things like successful scholarship applications, or even a class syllabus.</p>
 
-<p>Keep in mind, using this header (“Collaboration & Support”) is completely optional. You might find that something more traditional and straightforward like — Successful Scholarship Applications — better suit your needs, you might invent something else up, or you may skip this section entirely. Whatever the case, you can walk away from this section confidently understanding emphasis tags.</p>
+<p>Keep in mind, using this header (“Collaboration & Support”) is completely optional. You might find that something more traditional and straightforward like — Successful Scholarship Applications — better suit your needs, you might invent something else, or you may skip this section entirely. Whatever the case, you can walk away from this section confidently understanding emphasis tags.</p>
 
 <p>Now, on to understanding the code. We have already spoken about the section and heading tags. In this section, we will breakdown emphasis tags, which include: bold, italics and underline:</p>
 
 <ol type="1" value="1">
-<li>To make letter/ word italic you will type: &lti&gtletter/ word you want in italics&lt/i&gt</li>
-<li>To make a letter/word bold you will type: &ltb&gtletter/ word you want in bold&lt/b&gt</li>
-<li>To underline a letter/ word you will type: &ltu&gt letter/ word you want in italics&lt/u&gt</li>
+<li>To make letter/ word italic you will type: <code>&lti&gtletter/ word you want in italics&lt/i&gt</code></li>
+<li>To make a letter/word bold you will type: <code>&ltb&gtletter/ word you want in bold&lt/b&gt</code></li>
+<li>To underline a letter/ word you will type: <code>&ltu&gt letter/ word you want in italics&lt/u&gt</code></li>
 </ol>
 
 <h4>Footer</h4>
-<p></p>
 
 <img src="/footer.png" alt="Screenshot of Footer code" Align="center"/>
 
-<p>The footer section can be viewed as a counterpart to the header section. The material enclosed within the &ltfooter&gt&lt/footer&gt tags is what you would want to display at the bottom of your webpage, akin to the footer of a word document. Some common items often included in the footer are: copyright information; contact information; and links to allow visitors to navigate back to the top of the webpage. Here, we have included different IDs and tags which would allow visitors to the page to engage with or contact us.</p>
+<p>The footer section can be viewed as a counterpart to the header section. The material enclosed within the <code>&ltfooter&gt&lt/footer&gt</code> tags is what you would want to display at the bottom of your webpage, akin to the footer of a word document. Some common items often included in the footer are: copyright information; contact information; and links to allow visitors to navigate back to the top of the webpage. Here, we have included different IDs and tags which would allow visitors to the page to engage with or contact us.</p>
 
 <p>You have already encountered the other code used in this section above: unordered lists; list items; and link tags.</p>
 
-<h3>Part II: CSS</h3>
-<p></p>
+<h2>Part II: CSS</h2>
 
 <p>If you have been opening your index.html file on your web browser, you will see that it looks quite simple–black text on a white background. This is because web browsers have in-built default styling which makes content appear the way it does. In order to modify the presentation and appearance of your webpage, you will use CSS. Download the style.css file, and make sure that it is in the same folder as the index.html file.</p>
 
@@ -166,12 +164,12 @@ summary: A walkthrough guide for coding and creating your own site.
 <img src="/h2_selector.png" alt="Screenshot of h2 code" Align="center"/>
 
 <p><ol value="1" type="1">
-    <li>Selector: The selector is the name of the HTML element you would like to style; it opens the ruleset. Here, the selector is h2.</li>
+    <li>Selector: The selector is the name of the HTML element you would like to style; it opens the ruleset. Here, the selector is <code>h2</code>.</li>
     <li>Declaration: The declaration is composed of two elements – <i>property</i> and <i>property value</i>. Property refers to that attribute which you want to modify (here, background color) and property value refers to the option or value you want to assign to the property (here, the color “orchid”).</li>
     <li>When writing out CSS, there are a few syntax rules to keep in mind: <ul type="disk">
-        <li>The declaration (property + property value) are enclosed within <i>curly braces</i>.
+        <li>The declaration (property + property value) are enclosed within <i>curly brackets</i>.
         <li>The property and property value are separated by a colon.</li>
-        <li>You can have multiple declarations within your curly braces each of which are defining different stylistic properties (as we do in the case of the code associated with the selector “html” in the template we have provided). Each of these declarations should be separated by a semicolon and should, for the sake of clarity, be on a new line.</li>
+        <li>You can have multiple declarations within your curly brackets each of which are defining different stylistic properties (as we do in the case of the code associated with the selector “html” in the template we have provided). Each of these declarations should be separated by a semicolon and should, for the sake of clarity, be on a new line.</li>
     </ul></li>
 </ol></p>
 
@@ -181,27 +179,25 @@ summary: A walkthrough guide for coding and creating your own site.
 
 <p>CSS allows you to lay out a hierarchy of properties and values. For the most part, your computer will read CSS from top to bottom and whichever is the last definition it encounters, that is the way it will encode your webpage. This principle or rule is called "cascade". Does that sound familiar? Remember what CSS stands for? We'll give you a moment. Yep, CSS stands for <i>Cascading</i> Style Sheet, and this is precisely what is meant by Cascading. </p>
 
-<p>In our template, there are two selectors: html { } and h2{ }. While the properties in html { } apply to the entirety of your HTML content, you can target specific sections of your webpage using a variety of selectors. h2 { } is one of the selectors that you can use. Here, we have defined a background color for the h2 elements of your HTML document which is different from the rest of the content. Because the h2 selector comes after the html selector, your computer will use this latest bit of code to format the h2 elements of your webpage. This means that the background color for the h2 elements will override the color specified within the html selector for your level 2 headings.</p>
+<p>In our template, there are two selectors: <code>html{ }</code> and <code>h2{ }</code>. While the properties in <code>html{ }</code> apply to the entirety of your HTML content, you can target specific sections of your webpage using a variety of selectors. <code>h2{ }</code> is one of the selectors that you can use. Here, we have defined a background color for the <code>h2</code> elements of your HTML document which is different from the rest of the content. Because the <code>h2</code> selector comes after the html selector, your computer will use this latest bit of code to format the <code>h2</code> elements of your webpage. This means that the background color for the <code>h2</code> elements will override the color specified within the html selector for your level 2 headings.</p>
 
 <p>What might be different, or at least not immediately familiar, are the margin and padding properties. <a href="https://blog.hubspot.com/website/css-margin-vs-padding#:~:text=In%20CSS%2C%20a%20margin%20is,the%20space%20inside%20an%20element.">This blogpost</a> written by Jamie Juviler provides a great explanation; to quote him: “In CSS, a margin is the space around an element’s border, while padding is the space between an element’s border and the element’s content. Put another way, the margin property controls the space outside an element, and the padding property controls the space inside an element.” A pretty handy feature of VS Code is that as you begin coding your stylesheet, it will show you options for properties and property values that you might want to play with. Of course, as mentioned earlier, there are great options available online, and we particularly like this <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">Mozilla page for Developers</a>.</p>
 
 
 
-<h3>Experimenting On Your Own</h3>
-<p></p>
+<h2>Experimenting On Your Own</h2>
 
 <p>So far, we have walked you through some of the very basic elements of HTML and CSS using a pre-designed template. The aim of this was to encourage you to experience coding in a more accessible, welcoming manner. Now that you have had a feel of it, we hope you would want to experiment and play with code on your own. To that end, we want to highlight a few things you might find useful:</p>
 
 <h4>Creating HTML and CSS pages from scratch</h4>
-<p></p>
 
 <p>While we gave you sample HTML and CSS files to play with, it is useful to know how to create these files from scratch as well.</p>
 
 <p><ol type="1" value="1">
 
-    <li>First, create a folder for your project somewhere on your computer. The location doesn't matter, it just needs to be somewhere accessible to you. This one folder will be a container to hold all the documents, files, and images which will go into the making of your website. In order to create a folder, enter the following command in the terminal–either in the default terminal application on your computer or via VS Code: mkdir[space][folder name]. "Mkdir" is shorthand for "make directory"; when coding, directory is another way to refer to a folder.</li>
+    <li>First, create a folder for your project somewhere on your computer. The location doesn't matter, it just needs to be somewhere accessible to you. This one folder will be a container to hold all the documents, files, and images which will go into the making of your website. In order to create a folder, enter the following command in the terminal–either in the default terminal application on your computer or via VS Code: <code>mkdir[space][folder name]</code>. "Mkdir" is shorthand for "make directory"; when coding, directory is another way to refer to a folder.</li>
 
-    <li>Within that folder, you are going to create your HTML and CSS files. Just a reminder: make sure your files are in the same folder! You can create the file by entering the following command in the terminal: touch[space][name of file].
+    <li>Within that folder, you are going to create your HTML and CSS files. Just a reminder: make sure your files are in the same folder! You can create the file by entering the following command in the terminal: <code>touch[space][name of file]</code>.
     <ul type="disk">
         <li>Name the first file, which will be your homepage/landing page, index.html.</li>
         <li>Any subsequent files will correspond to other pages of your website. For example: resources.html or teaching.html</li>
@@ -210,7 +206,6 @@ summary: A walkthrough guide for coding and creating your own site.
 </ol></p>
 
 <h4>Inspect Element</h4>
-<p></p>
 
 <p>A pretty handy tool is “Inspect Element.”</p>
 
@@ -221,16 +216,15 @@ summary: A walkthrough guide for coding and creating your own site.
     <li>If you like particular elements of that page, you can take the code used to create those elements and include it in the code for your own website.</li>
 </ul></p>
 
-<p>Most importantly, don’t be overwhelmed by all the code you see and if you are unable to parse it! Some websites will make use of more complicated code than others, and it will take some time to become comfortable with this language and its visuals. Feel free to “inspect” the pages of the <i>[Your Name Here]</i> website. Our code is likely to be simpler than that of a lot of other websites, and you can even change bits of the code to see how those changes affect the page. Don’t worry, none of it will be permanent! Our personal, easy favorite is playing around with the colors on the webpage.</p>
+<p>Most importantly, don’t be overwhelmed by all the code you see if you are unable to parse it! Some websites will make use of more complicated code than others, and it will take some time to become comfortable with this language and its visuals. Feel free to “inspect” the pages of the <i>[Your Name Here]</i> website. Our code is likely to be simpler than that of a lot of other websites, and you can even change bits of the code to see how those changes affect the page. Don’t worry, none of it will be permanent! Our personal, easy favorite is playing around with the colors on the webpage. We have more in-depth prompts for ways to play with color in your site's design on <a href="https://brackets.scholarslab.org/design-ethos/">our design ethos page</a>.</p>
 
 <h4>Moving from a single web page to a website</h4>
-<p></p>
 
 <p>In this tutorial, we have guided you through the creation of a single webpage using one HTML file, index.html. However, websites have multiple pages. For example, the template we have created is divided into four different sections or subheadings. You might choose to have each of these subsections as different pages rather than as information gathered on a single page. In order to do this, you would create separate HTML files for each page you want on your website (e.g., scribblings.html; my_surrounds.html; collaboration.html) with index.html acting as the HTML file for your homepage/landing page. The documentation on <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_hyperlinks">Mozilla Developer tools</a> will show you how to link these separate web pages together into a single website.</p>
 
-<h3>Conclusion: Thanks for taking this journey with us!</h3>
-<p></p>
-<p>Congrats on wading through this much material. We've given you all the components to create your own personal page. If you’re new to this like many of us were, you’ve learned a great deal already. Also, feel free to keep practicing and playing around with the templates we have provided you. This much new information can be overwhelming and although much of this can be difficult to learn, repetition works wonders. How you choose to style and layout your site is entirely up to you. While we may lean towards rebellion and magic, our real message is that whatever your authentic self might be, you should embrace that and let it seep into the confines of your personal website. When we scoured personal websites for inspiration, a wide range of styles captured our attention — ranging from the whimsical to the long-established academic aesthetic and everything in-between. Whether you want your site to feature publications and academic awards or recipes and astrological charts, there is no wrong answer. Now that you have the technical abilities and tools to build your own unique online presence, we hope that you feel empowered enough to take the leap and let the world experience the beauty of the life that you have chosen (personally, professionally, academically, or all of the above).</p>
+<h2>Conclusion: Thanks for taking this journey with us!</h2>
+
+<p>Congrats on wading through this much material. We've given you all the components to create your own personal page. If you’re new to this like many of us were, you’ve learned a great deal already. Also, feel free to keep practicing and playing around with the templates we have provided you. This much new information can be overwhelming and although much of this can be difficult to learn, repetition works wonders. How you choose to style and layout your site is entirely up to you. While we may lean towards rebellion and magic, our real message is that whatever your authentic self might be, you should embrace that and let it seep into the confines of your personal website. When we scoured personal websites for <a href="https://brackets.scholarslab.org/credits/">inspiration</a>, a wide range of styles captured our attention — ranging from the whimsical to the long-established academic aesthetic and everything in-between. Whether you want your site to feature publications and academic awards or recipes and astrological charts, there is no wrong answer. Now that you have the technical abilities and tools to build your own unique online presence, we hope that you feel empowered enough to take the leap and let the world experience the beauty of the life that you have chosen (personally, professionally, academically, or all of the above).</p>
 
 
 <!--
