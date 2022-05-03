@@ -1,6 +1,6 @@
 ---
 ---
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,700;1,100&family=Karla:wght@300;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,700;1,100&family=Karla:wght@200;800&family=Space+Mono:wght@400;700&display=swap');
 @font-face {
     font-family: 'jen_hand_lightregular';
     src: url('/fonts/jenhandlight-regular-webfont.woff2') format('woff2'),
@@ -38,7 +38,7 @@ $link-color: $dark-teal;
 $link-color-visited: rgba($link-color,0.9);
 $link-color-hover: rgba($link-color, 0.8);
 $link-color-active: $text-color;
-$highlight-color: $yellow;
+$highlight-color: $pink;
 
 $background-color: $dark-blue;
 $background-color-alt: rgba($dark-blue, 0.5);
@@ -122,18 +122,15 @@ h1 {
 }
 
 h2 {
-    color: rgba($text-color, .8);
+    color: rgba($pink, .8);
     font-variant: small-caps;
     letter-spacing: 1px;
-    font-weight: 150;
+    font-weight: 800;
     font-size:1.5em;
 }
 
 h3 {
     font-size: 1.25em;
-}
-
-h3,h4 {
     font-weight: 700;
 }
 
@@ -142,7 +139,7 @@ h4 {
     font-variant: small-caps;
 }
 
-h2,h3,h4,h5 {
+h3,h4,h5 {
     margin-bottom:0 !important;
     + p,
     + ul,
@@ -151,12 +148,18 @@ h2,h3,h4,h5 {
     }
 }
 
-p + h2 {
+p + h2,
+h1 + h2,
+header + h2,
+section h2 {
     margin-top: 2em;
 }
 
 code {
     background-color: rgba($highlight-color,0.2);
+    font-size: 0.8em;
+    padding: 2px;
+    font-family: 'Space Mono', monospace;
 }
 
 blockquote,
@@ -192,6 +195,13 @@ blockquote p {
     width: 100%;
 }
 
+#banner h1 {
+    font-family: 'Space Mono', monospace;
+    text-transform: lowercase;
+    font-variant: unset;
+    letter-spacing: -1px;
+    line-height: 30px;
+}
 #banner a {
     text-decoration:none;
     &:link,
@@ -213,7 +223,7 @@ blockquote p {
     margin: 0 2px;
 }
 .bracket {
-    color: rgba(white,.5);
+    color: rgba(white,1);
 }
 
 #banner canvas {
@@ -255,10 +265,6 @@ main {
 
         a {
             display:block;
-            line-height:1;
-            overflow-x: hidden; /* Ensures the content is not revealed until the animation */
-            white-space: nowrap; /* Keeps the content on a single line */
-            letter-spacing: .15em; /* Adjust as needed */
         }
 
     }
@@ -298,8 +304,23 @@ main {
     background-color: $link-color-hover;
 }
 
-article > h1 {
-    font-size: 60px;
+article header {
+    background: $teal;
+    background: rgba($teal, 0.25);
+    margin: -80px -80px 80px;
+    padding: 80px;
+
+}
+article header h1 {
+    font-size: 80px;
+    line-height: 80px;
+    margin-top:0;
+}
+
+article header p {
+    color: $pink;
+    font-weight: 100;
+    font-size: 30px;
 }
 
 #glossary dt {
@@ -323,17 +344,17 @@ article > h1 {
 
     body {
         display:flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
     }
 
     body > * {
-        flex: 1 1 300px;
+        flex: 1 1 340px;
     }
 
     #banner {
-        max-width: 300px;
-        min-width: 300px;
-        padding: 20px;
+        max-width: 340px;
+        min-width: 340px;
+        padding: 20px 40px;
     }
 
     .home #banner {
