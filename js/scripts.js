@@ -25,14 +25,6 @@ $( "#glossary" ).accordion({
 });
 $("#glossary dt").css("cursor", "pointer");
 
-// Prompts Accordion
-$(".prompts").accordion({
-  header: "h4",
-  collapsible: true,
-  heightStyle: "content"
-});
-$(".prompts h4").css("cursor","pointer");
-
 // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
 // starting from v2 you can add only the features you need reducing the bundle size
 $(document).ready(async function () {
