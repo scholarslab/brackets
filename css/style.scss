@@ -128,14 +128,15 @@ code {
     background-color: rgba($highlight-color,0.2);
 }
 
-blockquote {
-    background: url('../images/window-dots.png'), white;
+blockquote,
+.window-dots {
+    background: url('../images/window-dots.png'), #fafafa;
     background-repeat: no-repeat;
     background-size: 60px, auto;
     background-position: 10px 10px;
-    padding:40px 20px 20px;
+    padding:60px 20px 20px;
     border-radius: 10px;
-    box-shadow: 0 0 6px rgba(black,0.1);
+    box-shadow: 0 0 6px rgba(black,0.2);
     margin:40px 0 40px 40px;
     position:relative;
     vertical-align: text-top;
