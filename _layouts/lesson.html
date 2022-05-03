@@ -2,29 +2,10 @@
 layout: default
 ---
 <article class="lesson">
-    {% assign lesson_navigation = site.lesson_navigation %}
-    {% for item in lesson_navigation %}
-        {% if page.url contains item %}
-        {% if forloop.first == false %}
-            {% assign previous = forloop.index0 | minus:1 %}
-            {% assign previous_page = site.pages | where_exp: "page", "page.url contains lesson_navigation[previous]" | first %}
-            {% capture previous_link %}
-                <a class="previous" href="{{ previous_page.url | relative_url }}">{{ previous_page.title }}</a>
-            {% endcapture %}
-        {% endif %}
-        {% if forloop.last == false %}
-            {% assign next = forloop.index0 | plus:1 %}
-            {% assign next_page = site.pages | where_exp: "page", "page.url contains lesson_navigation[next]" | first %}
-            {% capture next_link %}
-            <a class="next" href="{{ next_page.url | relative_url }}">{{ next_page.title }}</a>
-            {% endcapture %}
-        {% endif %}
-        {% endif %}
-    {% endfor %}
-    <nav class="lesson-navigation">
-        {{ previous_link }}{{ next_link }}
-    </nav>
+    <header>
     <h1>{{ page.title }}</h1>
+    <p class="summary">{{ page.summary }}</p>
+    </header>
     <div class="content">
     {{ content }}
     </div>

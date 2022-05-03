@@ -14,78 +14,6 @@ if (site_title.length != 0) {
     var typed = new Typed('.home #title', typed_options);
   }
 
-// Hamburger code sourced from https://codepen.io/unleashalicia/pen/YzXrJBN
-// jQuery element variables
-var $hamburgerMenuBtn,
-    $slideNav,
-    $closeBtn,
-    $main;
-
-// focus management variables
-var $focusableInNav,
-    $firstFocusableElement,
-    $lastFocusableElement;
-
-$hamburgerMenuBtn = $("#hamburger-menu"),
-$slideNav = $("#slide-nav"),
-$closeBtn = $("#close"),
-$main = $("main"),
-$focusableInNav = $('#slide-nav button, #slide-nav [href], #slide-nav input, #slide-nav select, #slide-nav textarea, #slide-nav [tabindex]:not([tabindex="-1"])');
-
-if ($focusableInNav.length) {
-    $firstFocusableElement = $focusableInNav.first();
-    $lastFocusableElement = $focusableInNav.last();
-}
-
-addEventListeners();
-
-function addEventListeners() {
-    $hamburgerMenuBtn.click(openNav);
-    $closeBtn.click(closeNav);
-    $slideNav.on("keyup", closeNav);
-    $firstFocusableElement.on("keydown", moveFocusToBottom);
-    $lastFocusableElement.on("keydown", moveFocusToTop);
-}
-
-function openNav() {
-    $slideNav.addClass("visible active");
-    setTimeout(function() {
-        $firstFocusableElement.focus()
-    }, 1);
-    $main.attr("aria-hidden", "true");
-    $hamburgerMenuBtn.attr("aria-hidden", "true");
-}
-
-function closeNav(e) {
-  if (e.type === "keyup" && e.key !== "Escape") {
-    return;
-  }
-
-  $slideNav.removeClass("active");
-  $main.removeAttr("aria-hidden");
-  $hamburgerMenuBtn.removeAttr("aria-hidden");
-  setTimeout(function() {
-    $hamburgerMenuBtn.focus()
-  }, 1);
-  setTimeout(function() {
-    $slideNav.removeClass("visible")
-  }, 501);
-}
-
-function moveFocusToTop(e) {
-    if (e.key === "Tab" && !e.shiftKey) {
-        e.preventDefault();
-        $firstFocusableElement.focus();
-    }
-}
-
-function moveFocusToBottom(e) {
-  if (e.key === "Tab" && e.shiftKey) {
-    e.preventDefault();
-    $lastFocusableElement.focus()
-  }
-}
-
 // jQuery UI Tabs.
 $("#tabs").tabs();
 
@@ -104,3 +32,65 @@ $(".prompts").accordion({
   heightStyle: "content"
 });
 $(".prompts h4").css("cursor","pointer");
+
+// this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+// starting from v2 you can add only the features you need reducing the bundle size
+// $(document).ready(async function () {
+//   await loadFull(tsParticles);
+
+//   $("#banner")
+//     .particles()
+//     .init(
+//       {
+//         fpsLimit: 60,
+//         particles: {
+//           color: {
+//             value: "#ffffff",
+//           },
+//           links: {
+//             color: "#ffffff",
+//             distance: 150,
+//             enable: true,
+//             opacity: 0.5,
+//             width: 1,
+//           },
+//           collisions: {
+//             enable: true,
+//           },
+//           move: {
+//             direction: "none",
+//             enable: true,
+//             outModes: {
+//               default: "bounce",
+//             },
+//             random: false,
+//             speed: 2,
+//             straight: false,
+//           },
+//           number: {
+//             density: {
+//               enable: true,
+//               area: 800,
+//             },
+//             value: 80,
+//           },
+//           opacity: {
+//             value: 0.5,
+//           },
+//           shape: {
+//             options: {
+//               character
+//             type: "image"
+//           },
+//           size: {
+//             value: { min: 1, max: 5 },
+//           },
+//         },
+//         detectRetina: true,
+//       },
+//       function (container) {
+//         // container is the particles container where you can play/pause or stop/start.
+//         // the container is already started, you don't need to start it manually.
+//       }
+//     );
+// });

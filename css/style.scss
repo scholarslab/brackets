@@ -1,6 +1,13 @@
 ---
 ---
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,700;1,100&family=Karla:wght@200;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,700;1,100&family=Karla:wght@300;800&display=swap');
+@font-face {
+    font-family: 'jen_hand_lightregular';
+    src: url('/fonts/jenhandlight-regular-webfont.woff2') format('woff2'),
+         url('/fonts/jenhandlight-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /*
 
@@ -19,6 +26,47 @@ p {
 
 */
 
+$dark-blue: rgb(13,20,64);
+$pink: rgb(191,98,151);
+$yellow: rgb(250,200,72);
+$red: rgb(191,50,52);
+$dark-teal: rgb(8,130,116);
+$teal: rgb(104,214,179);
+
+$text-color: #333;
+$link-color: $dark-teal;
+$link-color-visited: rgba($link-color,0.9);
+$link-color-hover: rgba($link-color, 0.8);
+$link-color-active: $text-color;
+$highlight-color: $yellow;
+
+$background-color: $dark-blue;
+$background-color-alt: rgba($dark-blue, 0.5);
+
+#colors div {
+    width: 100px;
+    height: 100px;
+    display:inline-block;
+
+    &:nth-child(1) {
+        background-color: $dark-teal;
+    }
+    &:nth-child(2) {
+        background-color: $teal;
+    }
+    &:nth-child(3) {
+        background-color: $red;
+    }
+    &:nth-child(4) {
+        background-color: $pink;
+    }
+    &:nth-child(5) {
+        background-color: $yellow;
+    }
+    &:nth-child(6) {
+        background-color: $dark-blue;
+    }
+}
 * {
     box-sizing: border-box;
 }
@@ -31,9 +79,10 @@ body {
 
 html{
     font-family: 'Karla', sans-serif;
-    color: #333;
+    color: $text-color;
     background-color: #fafafa;
     font-size: 24px;
+    line-height: 32px;
     margin:0;
 }
 
@@ -43,16 +92,16 @@ body {
 }
 
 a,a:link {
-    color: rgba(0,200,200,.875);
+    color: $link-color;
 }
 a:visited {
-    color:rgba(0,200,200,0.875);
+    color: $link-color-visited;
 }
 a:hover,a:focus,a.current {
-    color:rgba(0,200,200,1);
+    color: $link-color-hover;
 }
 a:active {
-    color: #333;
+    color: $link-color-active;
 }
 
 img {
@@ -66,7 +115,6 @@ h1,h2,h3 {
 }
 
 h1 {
-    color: rgba(0,0,0, .675);
     font-variant: small-caps;
     letter-spacing: 3px;
     font-weight: 100;
@@ -74,7 +122,7 @@ h1 {
 }
 
 h2 {
-    color: rgba(0,0,0, .8);
+    color: rgba($text-color, .8);
     font-variant: small-caps;
     letter-spacing: 1px;
     font-weight: 150;
@@ -90,7 +138,7 @@ h3,h4 {
 }
 
 h4 {
-    color: rgba(0,0,0,0.5);
+    color: rgba($text-color,0.8);
     font-variant: small-caps;
 }
 
@@ -108,16 +156,27 @@ p + h2 {
 }
 
 code {
-    background-color: rgba(0,200,200,0.1);
+    background-color: rgba($highlight-color,0.2);
 }
 
-blockquote {
-    background: rgba(0,200,200,0.1);
-    border-left: 10px solid rgba(0,200,200,0.4);
-    padding:40px;
+blockquote,
+.window-dots {
+    background: url('../images/window-dots.png'), #fafafa;
+    background-repeat: no-repeat;
+    background-size: 60px, auto;
+    background-position: 10px 10px;
+    padding:60px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(black,0.2);
     margin:40px 0 40px 40px;
     position:relative;
     vertical-align: text-top;
+}
+
+blockquote p {
+    background: rgba($teal,0.65);
+    padding: 20px;
+    margin:20px 0 0;
 }
 
 
@@ -129,9 +188,22 @@ blockquote {
 
 /* Banner */
 #banner {
-    background: rgba(0,0,0,0.825);
+    background: rgba($background-color,1);
+    width: 100%;
 }
 
+#banner a {
+    text-decoration:none;
+    &:link,
+    &:visited {
+        color: rgba(white,0.875);
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color:white;
+    }
+}
 .home #banner a {
     display:flex;
     justify-content: space-between;
@@ -141,8 +213,17 @@ blockquote {
     margin: 0 2px;
 }
 .bracket {
-    color: rgba(255,255,255,.125);
+    color: rgba(white,.5);
 }
+
+#banner canvas {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
 /* Main Content */
 main {
     padding: 20px;
@@ -162,24 +243,19 @@ main {
             margin:0;
             font-size: 30px;
         }
-
+        nav {
+            display:none;
+        }
         /*
         Typing animation courtesy of https://css-tricks.com/snippets/css/typewriter-effect/
         */
 
         a {
-            color: rgba(0,200,200,0.75);
-            text-decoration:none;
             display:block;
             line-height:1;
             overflow-x: hidden; /* Ensures the content is not revealed until the animation */
             white-space: nowrap; /* Keeps the content on a single line */
             letter-spacing: .15em; /* Adjust as needed */
-        }
-
-        :hover,:focus {
-            color: rgba(0,200,200,0.95);
-            background:none;
         }
 
     }
@@ -190,39 +266,37 @@ main {
 .lesson-navigation {
     display: flex;
     flex-direction: row;
+    flex-wrap:wrap;
     justify-content: space-between;
     width: 100%;
 }
-
-.lesson-navigation a,
-.lesson-navigation a:visited {
+.lesson-navigation a {
+    display:flex;
+    min-height: 200px;
+    flex-direction: column;
     text-decoration:none;
-    background-color: rgba(0,220,220,1);
+    justify-content: left;
     color: white;
-    text-align: center;
-    border-radius: 10px;
-    font-size: 24px;
-    padding: 5px;
+    width: 49%;
+    padding: 40px;
+    font-size: 40px;
+    margin-bottom: 2%;
+    background-color: $teal;
+    font-weight: 100;
 }
 
+.lesson-navigation a span {
+    font-size: 20px;
+    margin-top: 8px;
+    color: rgba(white,0.8);
+}
 .lesson-navigation a:hover,
 .lesson-navigation a:focus {
-    background-color: rgba(0,220,220,0.8);
+    background-color: $link-color-hover;
 }
 
-.previous:before {
-    content: "< ";
-}
-
-.next:after {
-    content: " >"
-}
-
-#start {
-    display:block;
-    margin: 40px auto;
-    font-weight: bold;
-    padding: 20px 30px;
+.lesson-navigation .glossary {
+    display:none;
 }
 
 article > h1 {
@@ -246,93 +320,11 @@ article > h1 {
     margin:0 0 1em;
 }
 
-/* Hamburger menu code sourced from https://codepen.io/unleashalicia/pen/YzXrJBN */
-#global_navigation {
-    position:absolute;
-    top:0;
-    right:0;
-}
-#global_navigation ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-}
-#global_navigation button {
-    cursor: pointer;
-}
-button.open-nav-btn {
-  font-size: 1.5rem;
-  border: 1px solid black;
-  background-color: transparent;
-  margin: 10px;
-}
-
-.slide-content {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: black;
-  overflow-x: hidden;
-  transition: width 0.5s;
-  padding-top: 60px;
-  visibility: hidden;
-}
-
-.slide-content a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #F5F5F5;
-  display: block;
-}
-
-.slide-content a:focus,
-.slide-content button:focus {
-  outline: 2px solid orange;
-}
-
-#global_navigation a:focus,
-.open-nav-btn:focus {
-  outline: 2px solid blue;
-  outline-offset: 5px;
-}
-
-.close-btn {
-  font-size: 25px;
-  color: #F5F5F5;
-  background-color: transparent;
-  border: none;
-}
-
-.slide-content a:hover,
-.slide-content a:focus {
-  text-decoration: underline;
-}
-
-.slide-content .close-btn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.visible {
-  visibility: visible;
-}
-
-.active {
-  width: 250px;
-}
-
 @media screen and (min-width: 900px) {
 
     body {
         display:flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
     }
 
     body > * {
@@ -342,6 +334,7 @@ button.open-nav-btn {
     #banner {
         max-width: 200px;
         min-width: 200px;
+        padding: 20px;
     }
 
     .home #banner {
@@ -358,16 +351,19 @@ button.open-nav-btn {
         font-size: 80px;
     }
 
-    #global_navigation,
-    .slide-content {
-        position: fixed;
-        left:0;
-        right: unset;
+    #global_navigation a {
+        display:block;
+        text-decoration:none;
     }
 
     main, {
-        padding: 80px;
+        padding: 80px 80px 0;
         width: auto;
+    }
+
+    .home main {
+        margin: auto;
+        max-width: 1100px;
     }
 }
 
@@ -381,7 +377,7 @@ button.open-nav-btn {
 }
 
 #tabs .ui-tabs-nav li {
-    margin:0 1px;
+    margin:2px;
     padding:20px 0;
 }
 
@@ -389,18 +385,19 @@ button.open-nav-btn {
     text-decoration:none;
     padding: 20px 60px;
     flex-basis: 40%;
-    background: rgba(0,200,200,0.25);
+    background: linear-gradient(to top, rgba(0,0,0, 0.0375) 0, transparent 250%), rgba($pink,0.25);
 }
 
 #tabs .ui-tabs-nav a:hover {
-    background: rgba(0,200,200,0.175);
+    background: rgba($pink,0.25);
 }
-#tabs .ui-tabs-active a {
-    background: rgba(0,200,200,0.125);
+#tabs .ui-tabs-active a,
+#tabs .ui-tabs-active a:hover {
+    background: rgba($pink,0.125);
 }
 
 #tabs section {
-    background: rgba(0,200,200,0.125);
+    background: rgba($pink,0.125);
     margin:0 -80px;
     padding: 40px 80px;
 }
