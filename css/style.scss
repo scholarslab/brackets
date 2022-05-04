@@ -482,13 +482,15 @@ article header p {
 }
 
 #tabs .ui-tabs-nav li {
-    margin:2px;
+    margin:0px;
     padding:20px 0;
+    display: inline-block;
 }
 
 #tabs .ui-tabs-nav a {
     text-decoration:none;
     padding: 20px 60px;
+    width: 40%;
     flex-basis: 40%;
     background: linear-gradient(to top, rgba(0,0,0, 0.0375) 0, transparent 250%), rgba($pink,0.25);
 }
