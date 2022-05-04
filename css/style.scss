@@ -289,7 +289,7 @@ main {
 /* Lesson Navigation */
 .lesson-navigation {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap:wrap;
     justify-content: space-between;
     width: 100%;
@@ -301,7 +301,7 @@ main {
     text-decoration:none;
     justify-content: left;
     color: white;
-    width: 49%;
+    width: 100%;
     padding: 40px;
     font-size: 40px;
     margin-bottom: 2%;
@@ -386,6 +386,13 @@ article header p {
         font-size: 80px;
     }
 
+    .lesson-navigation {
+        flex-direction: row;
+
+        a {
+            width: 49%;
+        }
+    }
     #global_navigation {
         margin-top: 50px;
         a {
