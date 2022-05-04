@@ -27,7 +27,7 @@ p {
 */
 
 $dark-blue: rgb(13,20,64);
-$pink: rgb(191,98,151);
+$pink: rgb(170, 70, 120);
 $yellow: rgb(250,200,72);
 $red: rgb(191,50,52);
 $dark-teal: rgb(8,130,116);
@@ -412,6 +412,7 @@ article header p {
     }
 
     .home #banner {
+        position:unset;
         height: 80vh;
         max-width: none;
         min-width: none;
@@ -433,8 +434,14 @@ article header p {
         }
     }
 
+    #banner h1,
     #global_navigation {
-        margin-top: 50px;
+        position: fixed;
+    }
+
+    #global_navigation {
+        top: 100px;
+        width: 260px;
         a {
             display:block;
             text-decoration:none;
