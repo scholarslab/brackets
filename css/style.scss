@@ -27,7 +27,7 @@ p {
 */
 
 $dark-blue: rgb(13,20,64);
-$pink: rgb(191,98,151);
+$pink: rgb(170, 70, 120);
 $yellow: rgb(250,200,72);
 $red: rgb(191,50,52);
 $dark-teal: rgb(8,130,116);
@@ -412,6 +412,7 @@ article header p {
     }
 
     .home #banner {
+        position:unset;
         height: 80vh;
         max-width: none;
         min-width: none;
@@ -433,8 +434,14 @@ article header p {
         }
     }
 
+    #banner h1,
     #global_navigation {
-        margin-top: 50px;
+        position: fixed;
+    }
+
+    #global_navigation {
+        top: 100px;
+        width: 260px;
         a {
             display:block;
             text-decoration:none;
@@ -479,16 +486,20 @@ article header p {
     font-size: 30px;
     display:flex;
     justify-content: center;
+    z-index: 1000;
+
 }
 
 #tabs .ui-tabs-nav li {
-    margin:2px;
+    margin:0px;
     padding:20px 0;
+    display: inline-block;
 }
 
 #tabs .ui-tabs-nav a {
     text-decoration:none;
     padding: 20px 60px;
+    width: 40%;
     flex-basis: 40%;
     background: linear-gradient(to top, rgba(0,0,0, 0.0375) 0, transparent 250%), rgba($pink,0.25);
 }
@@ -503,8 +514,9 @@ article header p {
 
 #tabs section {
     background: rgba($pink,0.125);
-    margin:0 -80px;
+    margin:0 -80px -80px;
     padding: 40px 80px;
+    z-index: 100;
 }
 
 #tabs section h2 {
