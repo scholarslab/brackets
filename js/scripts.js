@@ -20,7 +20,8 @@ $("#tabs").tabs();
 // Glossary Accordion.
 $( "#glossary" ).accordion({
     header: "dt",
-    collapsible: true,
+    collapsible: true, 
+    active: false,
     heightStyle: "content"
 });
 $("#glossary dt").css("cursor", "pointer");
