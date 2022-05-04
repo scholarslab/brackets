@@ -2,7 +2,7 @@
 layout: default
 title: Home
 ---
-<p>​​<b class="site-title">[Your Name Here]</b> aims to empower other graduate students and humanities academics with the coding skills and the confidence to create a personal website that reflects who they are and what they value to the public.</p>
+<p>​​<b class="site-title">{Your Name Here}</b> aims to empower other graduate students and humanities academics with the coding skills and the confidence to create a personal website that reflects who they are and what they value to the public.</p>
 <nav class="lesson-navigation">
     {% for item in site.lesson_navigation %}
     {% assign link = site.pages | where_exp: "page", "page.url contains item" | first %}
