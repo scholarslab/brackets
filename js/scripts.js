@@ -14,13 +14,13 @@ if (site_title.length != 0) {
     var typed = new Typed('.home #title', typed_options);
   }
 
-// jQuery UI Tabs.
+\
 $("#tabs").tabs();
 
 // Glossary Accordion.
 $( "#glossary" ).accordion({
     header: "dt",
-    collapsible: true, 
+    collapsible: true,
     active: false,
     heightStyle: "content"
 });
