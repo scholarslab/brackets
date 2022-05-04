@@ -486,6 +486,8 @@ article header p {
     font-size: 30px;
     display:flex;
     justify-content: center;
+    z-index: 1000;
+
 }
 
 #tabs .ui-tabs-nav li {
@@ -512,8 +514,9 @@ article header p {
 
 #tabs section {
     background: rgba($pink,0.125);
-    margin:0 -80px;
+    margin:0 -80px -80px;
     padding: 40px 80px;
+    z-index: 100;
 }
 
 #tabs section h2 {
