@@ -31,17 +31,15 @@ github_username:  scholarslab
 permalink: /:year/:month/:title/
 
 lesson_navigation:
+  - about
   - individuality-solidarity
   - design-ethos
   - environment
   - tutorial
   - publish
-
-
-complementary_navigation:
-  - about
   - glossary
   - credits
+
 
 # Build settings
 plugins:
